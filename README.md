@@ -4,7 +4,7 @@ This repo contains the input files we need to run some basic DTF calculations us
 
 Quantum ESPRESSO: <https://www.quantum-espresso.org>
 
-Pseudopotentials: [Pseudo-dojo]<https://www.pseudo-dojo.org>
+Pseudopotentials: <https://www.pseudo-dojo.org>
 
 Database of CIF files (experimental crystal structures): <https://rruff.geo.arizona.edu/AMS/amcsd.php>
 
