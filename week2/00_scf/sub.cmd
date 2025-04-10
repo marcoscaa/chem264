@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#SBATCH -p 128x24   # Partition name
+#SBATCH -p instruction  # Partition name
 #SBATCH -J test        # Job name
 #SBATCH --mail-user=<cruzid>@ucsc.edu
 #SBATCH --mail-type=ALL
