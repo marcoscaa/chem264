@@ -16,8 +16,10 @@ def generate_pwscf_input_from_cif(structure, output_filename="pwscf.in"):
             'calculation':'scf',
             'restart_mode': 'from_scratch',
             'prefix': 'ge',
-            'pseudo_dir': './pseudo',
+            'pseudo_dir': './',
             'outdir': './out',
+            'tprnfor': True,
+            'tstress': True,
         },
         'system': {
             'ibrav': 0,  # 0 for general cell
@@ -27,16 +29,16 @@ def generate_pwscf_input_from_cif(structure, output_filename="pwscf.in"):
             'degauss': 0.01,
         },
         'electrons': {
-            'mixing_beta': 0.5,
+            'mixing_beta': 0.4,
+            'mixing_mode': 'plain',
         },
-        'k_points': {'scheme': 'automatic'}, # Example k-point scheme
     }
 
     pseudopotentials={}
     for symbol in atoms.get_chemical_symbols():
         if symbol not in pseudopotentials:
             pseudopotentials[symbol] = symbol+".upf"
-    kpoints_grid_config = "444"
+    kpoints_grid_config = "888"
 
     write(output_filename, 
             atoms, 
@@ -47,9 +49,8 @@ def generate_pwscf_input_from_cif(structure, output_filename="pwscf.in"):
 
 
 if __name__ == "__main__":
-    # Replace with the desired Materials Project ID and your API key
     cif_filename = argv[1] 
-    output_file = "pw.in"  # You can change the output filename
+    output_file = "scf.in"  # You can change the output filename
 
     generate_pwscf_input_from_cif(cif_filename, output_file)
 
