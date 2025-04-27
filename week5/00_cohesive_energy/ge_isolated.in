@@ -1,0 +1,46 @@
+! Input file for SCF calculation of isolated Germanium atom
+
+&CONTROL
+    calculation   = 'scf'             ! Type of calculation: single self-consistent field calculation 
+    restart_mode  = 'from_scratch'    ! Start a new calculation
+    prefix        = 'Ge_0'            ! Prefix for output files (choose a descriptive name)
+    pseudo_dir    = './'              ! Directory containing pseudopotential files (MODIFY AS NEEDED)
+    outdir        = './Ge_out/'       ! Directory for output/temporary files (MUST EXIST)
+    verbosity     = 'low'             ! Level of output detail ('low', 'medium', 'high')
+    tprnfor       = .false.           ! Don't print forces
+    tstress       = .false.           ! Don't print stress tensor
+/
+
+&SYSTEM
+    ibrav         = 1                 ! Bravais lattice index: 1 = simple cubic 
+    a             = 10                ! Lattice parameter 'a' in Angstrom units
+    nat           = 1                 ! Number of atoms in the primitive unit cell
+    nspin         = 2
+    starting_magnetization(1) = 1.0
+    ntyp          = 1                 ! Number of types of atoms
+    ecutwfc       = 80.0              ! Kinetic energy cutoff for wavefunctions (in Ry)
+    occupations   = 'smearing'        ! Use smearing for occupations (good for convergence, essential for metals)
+    smearing      = 'gaussian'        ! Type of smearing
+    degauss       = 0.01              ! Smearing width (in Ry) - small value for semiconductors
+/
+
+&ELECTRONS
+    mixing_mode   = 'plain'           ! Charge density mixing scheme
+    mixing_beta   = 0.4               ! Mixing factor for density mixing
+    conv_thr      = 1.0e-6            ! Convergence threshold for SCF total energy (in Ry/cell)
+    diagonalization = 'david'         ! Algorithm for Hamiltonian diagonalization
+/
+
+&IONS
+/
+
+&CELL
+/
+
+ATOMIC_SPECIES
+  Ge      72.630   Ge.upf  ! PP file has to be in UPF format 
+
+ATOMIC_POSITIONS {alat}
+  Ge   0.00   0.00   0.00
+
+K_POINTS {gamma}  ! Sampling only the gamma point (0.0,0.0,0.0) of the BZ
