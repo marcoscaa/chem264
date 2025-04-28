@@ -20,7 +20,7 @@
    mixing_beta      = 0.4
 /
 &IONS
-   ions_dynamics    = 'bfgs'
+   ion_dynamics    = 'bfgs'
 /
 &CELL
 /

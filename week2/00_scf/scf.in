@@ -16,9 +16,9 @@
     a             = 5.658             ! Lattice parameter 'a' in Angstrom units
     nat           = 2                 ! Number of atoms in the primitive unit cell
     ntyp          = 1                 ! Number of types of atoms
-    ecutwfc       = 40.0              ! Kinetic energy cutoff for wavefunctions (in Ry)
+    ecutwfc       = 60.0              ! Kinetic energy cutoff for wavefunctions (in Ry)
     occupations   = 'smearing'        ! Use smearing for occupations (good for convergence, essential for metals)
-    smearing      = 'marzari-vanderbilt' ! Type of smearing
+    smearing      = 'gaussian'        ! Type of smearing
     degauss       = 0.01              ! Smearing width (in Ry) - small value for semiconductors
 /
 
