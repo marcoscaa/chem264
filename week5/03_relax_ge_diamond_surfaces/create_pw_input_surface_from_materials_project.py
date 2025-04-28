@@ -29,7 +29,7 @@ def generate_pwscf_input_from_mp(atoms, output_filename="pwscf.in"):
             'mixing_beta': 0.4,
         },
         'ions': {
-            'ions_dynamics': 'bfgs',
+            'ion_dynamics': 'bfgs',
         }
     }
 
