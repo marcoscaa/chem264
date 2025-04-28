@@ -15,7 +15,7 @@ module load quantumespresso/7.2
 
 # Use of -p replaces the need to use "#SBATCH --cpus-per-task"
 
-for alat in "5.2" "5.3" "5.4" "5.5" "5.6" "5.7" "5.72" "5.74" "5.76" "5.78" "5.8" "5.82" "5.84" "5.9" "6.0" "6.1" "6.2" "6.3" "6.4" "6.5" "6.6" 
+for alat in "4.0" "4.2" "4.4" "4.6" "4.8" "5.0" "5.1" "5.2" "5.3" "5.4" "5.6" "5.8" 
 do
   #celldm=`echo "${alat}*1.88973" | bc -l`
   celldm=`python -c "print(${alat}*1.88973)"`
