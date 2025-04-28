@@ -4,6 +4,8 @@ from ase.build import surface, make_supercell
 from pymatgen.io.ase import AseAtomsAdaptor
 from pymatgen.ext.matproj import MPRester
 from pymatgen.core import Structure
+from pymatgen.symmetry.analyzer import SpacegroupAnalyzer
+import numpy as np
 from sys import argv
 
 def generate_pwscf_input_from_mp(atoms, output_filename="pwscf.in"):
@@ -37,7 +39,7 @@ def generate_pwscf_input_from_mp(atoms, output_filename="pwscf.in"):
     for symbol in atoms.get_chemical_symbols():
         if symbol not in pseudopotentials:
             pseudopotentials[symbol] = symbol+".upf"
-    kpoints_grid_config = "881"
+    kpoints_grid_config = "441"
 
     write(output_filename, 
             atoms, 
@@ -51,7 +53,9 @@ def get_structure_from_mp(api_key, mp_id):
         with MPRester(api_key) as mpr:
             structure = mpr.get_structure_by_material_id(mp_id)
             if structure:
-                return structure
+                analyzer = SpacegroupAnalyzer(structure)
+                conventional = analyzer.get_conventional_standard_structure()
+                return conventional
             else:
                 print(f"No structure found for MP-ID: {mp_id}")
                 return None
@@ -66,7 +70,7 @@ def make_surface(structure, miller_index):
 
     #Create a surface with miller index miller_index
     #The slab has 4 layers, and 10 A vacuum between periodic replicas
-    slab = surface(atoms,miller_index,layers=4,vacuum=5,periodic=True)
+    slab = surface(atoms,miller_index,layers=2,vacuum=5,periodic=True)
 
     return slab
 
@@ -75,6 +79,24 @@ def string_to_tuple_map(s):
   if not isinstance(s, str) or len(s) != 3 or not s.isdigit():
     return "Invalid input: String must be 3 digits."
   return tuple(map(int, s))
+
+def randomly_displace(atoms, amplitude=0.1):
+    """
+    Randomly displaces the atoms in an ASE Atoms object.
+
+    Args:
+        atoms (ase.Atoms): The Atoms object to displace.
+        amplitude (float): The maximum magnitude of the displacement in Angstroms.
+                           Default is 0.1 Angstroms.
+
+    Returns:
+        ase.Atoms: A new Atoms object with the displaced atomic positions.
+    """
+    new_atoms = atoms.copy()  # It's good practice to work on a copy
+    n_atoms = len(new_atoms)
+    displacements = np.random.uniform(low=-amplitude, high=amplitude, size=(n_atoms, 3))
+    new_atoms.positions += displacements
+    return new_atoms
 
 if __name__ == "__main__":
     # Replace with the desired Materials Project ID and your API key
@@ -93,6 +115,9 @@ if __name__ == "__main__":
 
     #Make surface supercell
     atoms_slab = make_supercell(atoms_slab, [[na,0,0],[0,nb,0],[0,0,1]])
+
+    #Randomly displace atoms to move than slightly away from perfect crystal
+    atoms_slab = randomly_displace(atoms_slab,0.02) 
 
     generate_pwscf_input_from_mp(atoms_slab, output_file)
 
