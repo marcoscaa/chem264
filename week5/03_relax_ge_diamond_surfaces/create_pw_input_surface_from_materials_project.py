@@ -70,14 +70,14 @@ def make_surface(structure, miller_index):
 
     #Create a surface with miller index miller_index
     #The slab has 4 layers, and 10 A vacuum between periodic replicas
-    slab = surface(atoms,miller_index,layers=2,vacuum=5,periodic=True)
+    slab = surface(atoms,miller_index,layers=4,vacuum=5,periodic=True)
 
     return slab
 
 def string_to_tuple_map(s):
-  """Converts a 3-digit string to a tuple of integers using the map() function."""
-  if not isinstance(s, str) or len(s) != 3 or not s.isdigit():
-    return "Invalid input: String must be 3 digits."
+  """Converts string to a tuple of integers using the map() function."""
+  if not isinstance(s, str) or not s.isdigit():
+    return "Invalid input"
   return tuple(map(int, s))
 
 def randomly_displace(atoms, amplitude=0.1):
@@ -101,7 +101,8 @@ def randomly_displace(atoms, amplitude=0.1):
 if __name__ == "__main__":
     # Replace with the desired Materials Project ID and your API key
     material_id_to_extract = argv[1] 
-    miller_index = string_to_tuple_map(argv[2]) #should be a 3-digits integer, ex: 100
+    miller_index = string_to_tuple_map(argv[2]) #Should be a 3 digits number
+    print(miller_index)
     na=int(argv[3]) #Replicate x direction na times
     nb=int(argv[4]) #Replicate y direction nb times
     your_api_key = "qQccZYnGqnS0ad2qoZ92chnoQdBvKgSb"  # Replace with your actual API key
