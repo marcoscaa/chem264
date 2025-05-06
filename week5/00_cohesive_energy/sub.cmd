@@ -14,6 +14,6 @@ export OMPI_MCA_btl=tcp,sm,self
 module load quantumespresso/7.2
 
 # Use of -p replaces the need to use "#SBATCH --cpus-per-task"
-mpirun -np $SLURM_NTASKS pw.x -nk 4 < vc-relax_bulk_diamond.in > vc-relax_bulk_diamond.in 
-mpirun -np $SLURM_NTASKS pw.x -nk 4 < vc-relax_bulk_b-tin.in > vc-relax_bulk_b-tin.in 
+mpirun -np $SLURM_NTASKS pw.x -nk 4 < vc-relax_bulk_diamond.in > vc-relax_bulk_diamond.out 
+mpirun -np $SLURM_NTASKS pw.x -nk 4 < vc-relax_bulk_b-tin.in > vc-relax_bulk_b-tin.out
 mpirun -np 4 pw.x < ge_isolated.in > ge_isolated.out
