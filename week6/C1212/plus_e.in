@@ -1,0 +1,52 @@
+! Input file for SCF calculation of bulk Germanium (Diamond Structure)
+
+&CONTROL
+    calculation   = 'scf'             ! Type of calculation: Self-Consistent Field
+    restart_mode  = 'from_scratch'    ! Start a new calculation
+    prefix        = 'Ge_scf'          ! Prefix for output files (choose a descriptive name)
+    pseudo_dir    = './'              ! Directory containing pseudopotential files (MODIFY AS NEEDED)
+    outdir        = './Ge_out/'       ! Directory for output/temporary files (MUST EXIST)
+    verbosity     = 'low'             ! Level of output detail ('low', 'medium', 'high')
+    tprnfor       = .true.            ! Print forces
+    tstress       = .true.            ! Print stress tensor
+/
+
+&SYSTEM
+    ibrav         = 0                 ! 
+    nat           = 8                 ! Number of atoms in the primitive unit cell
+    a             = 5.76
+    ntyp          = 1                 ! Number of types of atoms
+    ecutwfc       = 80.0              ! Kinetic energy cutoff for wavefunctions (in Ry)
+    occupations   = 'smearing'        ! Use smearing for occupations (good for convergence, essential for metals)
+    smearing      = 'gaussian'        ! Type of smearing
+    degauss       = 0.01              ! Smearing width (in Ry) - small value for semiconductors
+    nosym         = .true.
+/
+
+&ELECTRONS
+    mixing_mode   = 'plain'           ! Charge density mixing scheme
+    mixing_beta   = 0.4               ! Mixing factor for density mixing
+    conv_thr      = 1.0e-8            ! Convergence threshold for SCF total energy (in Ry/cell)
+    diagonalization = 'david'         ! Algorithm for Hamiltonian diagonalization
+/
+
+ATOMIC_SPECIES
+  Ge      72.630   Ge.upf  ! PP file has to be in UPF format 
+
+CELL_PARAMETERS alat
+1.00 0.01 0.00
+0.00 1.00 0.00
+0.00 0.00 1.00
+
+ATOMIC_POSITIONS {crystal}
+Ge  0.000000000 0.000000000 0.000000000
+Ge  0.500000000 0.500000000 0.000000000
+Ge  0.500000000 0.000000000 0.500000000
+Ge  0.000000000 0.500000000 0.500000000
+Ge  0.250000000 0.250000000 0.250000000
+Ge  0.750000000 0.750000000 0.250000000
+Ge  0.750000000 0.250000000 0.750000000
+Ge  0.250000000 0.750000000 0.750000000
+
+K_POINTS {automatic}
+  4 4 4  0 0 0  
