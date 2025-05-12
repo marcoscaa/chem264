@@ -1,4 +1,4 @@
-! Input file for SCF calculation of isolated Germanium atom
+! Input file for relax calculation of a water dimer in the gas phase
 
 &CONTROL
     calculation   = 'relax'           ! Type of calculation: ion relaxation 
