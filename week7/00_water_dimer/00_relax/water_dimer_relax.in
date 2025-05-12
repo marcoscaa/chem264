@@ -1,0 +1,53 @@
+! Input file for SCF calculation of isolated Germanium atom
+
+&CONTROL
+    calculation   = 'relax'           ! Type of calculation: ion relaxation 
+    restart_mode  = 'from_scratch'    ! Start a new calculation
+    prefix        = 'water'           ! Prefix for output files (choose a descriptive name)
+    pseudo_dir    = './'              ! Directory containing pseudopotential files (MODIFY AS NEEDED)
+    outdir        = './out/'          ! Directory for output/temporary files (MUST EXIST)
+    verbosity     = 'low'             ! Level of output detail ('low', 'medium', 'high')
+    tprnfor       = .true.            ! Print forces
+    tstress       = .false.           ! Don't print stress tensor
+    etot_conv_thr = 1.e-5             ! Criterium convergence for ion minimization (using energy)
+    forc_conv_thr = 1.e-4             ! Criterium convergence for ion minimization (using forces)
+/
+
+&SYSTEM
+    ibrav         = 1                 ! Bravais lattice index: 1 = simple cubic 
+    a             = 12                ! Lattice parameter 'a' in Angstrom units
+    nat           = 6                 ! Number of atoms in the primitive unit cell
+    ntyp          = 2                 ! Number of types of atoms
+    ecutwfc       = 60.0              ! Kinetic energy cutoff for wavefunctions (in Ry)
+    occupations   = 'smearing'        ! Use smearing for occupations (good for convergence, essential for metals)
+    smearing      = 'gaussian'        ! Type of smearing
+    degauss       = 0.01              ! Smearing width (in Ry) - small value for semiconductors
+/
+
+&ELECTRONS
+    mixing_mode   = 'plain'           ! Charge density mixing scheme
+    mixing_beta   = 0.4               ! Mixing factor for density mixing
+    conv_thr      = 1.0e-8            ! Convergence threshold for SCF total energy (in Ry/cell)
+    diagonalization = 'david'         ! Algorithm for Hamiltonian diagonalization
+/
+
+&IONS
+    ion_dynamics  = 'bfgs'            ! Algorithm for ion minimization
+/
+
+&CELL
+/
+
+ATOMIC_SPECIES
+  O      16.00   O.upf  ! PP file has to be in UPF format 
+  H       1.00   H.upf  
+
+ATOMIC_POSITIONS {angstrom}
+O       -3.0712901208      1.2749283223     -0.0733661446                 
+H       -2.0903653163      1.3159322442     -0.0259062237                 
+H       -3.2567242414      0.5127163843      0.4948217838                 
+O       -0.3596718358      1.2127619739      0.3718793464                 
+H        0.4004342459      1.0534395937     -0.2128734031                 
+H        0.0246542685      1.7551707864      1.0825724691                 
+
+K_POINTS {gamma}  ! Sampling only the gamma point (0.0,0.0,0.0) of the BZ
