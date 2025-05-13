@@ -102,15 +102,16 @@ def calculate_and_print_eigenvalues(dynamical_matrix):
 
     return eigenvalues_in_cm2, eigenvectors
 
-def visualize_normal_modes(atoms, eigenvectors, eigenvalues_in_cm2, scale=0.1):
+def visualize_normal_modes(atoms, eigenvectors, eigenvalues_in_cm2, scale=0.1, animation_time=10):
     """
-    Visualizes the normal modes of vibration using VPython.
+    Visualizes the normal modes of vibration using VPython with animation.
 
     Args:
         atoms (ase.Atoms): The Atoms object.
         eigenvectors (numpy.ndarray): The eigenvectors of the dynamical matrix.
         eigenvalues_in_cm2 (numpy.ndarray): The eigenvalues of the dynamical matrix (in cm^-2).
         scale (float, optional): Scaling factor for the displacement vectors.
+        animation_time (float, optional):  The total time in seconds for the animation.
     """
     N = len(atoms)
     positions = atoms.get_positions()
@@ -122,10 +123,12 @@ def visualize_normal_modes(atoms, eigenvectors, eigenvalues_in_cm2, scale=0.1):
     # Create spheres for atoms
     atom_spheres = []
     for i in range(N):
-        atom_color = {'C': color.black, 'H': color.white, 'O': color.red, 'N': color.blue}.get(symbols[i], color.gray) #Added more colors
-        sphere = sphere(pos=vector(positions[i, 0], positions[i, 1], positions[i, 2]),
-                        radius=0.1, color=atom_color)
-        atom_spheres.append(sphere)
+        atom_color = {'C': color.black, 'H': color.white, 'O': color.red,
+                      'N': color.blue}.get(symbols[i], color.gray)  # Added more colors
+        atom_sphere = sphere(pos=vector(positions[i, 0], positions[i, 1],
+                                        positions[i, 2]),
+                            radius=0.3, color=atom_color)
+        atom_spheres.append(atom_sphere)
 
     # Visualize each normal mode
     for mode_index in range(3 * N):
@@ -143,17 +146,32 @@ def visualize_normal_modes(atoms, eigenvectors, eigenvalues_in_cm2, scale=0.1):
         arrows = []
         for i in range(N):
             arrow_obj = arrow(pos=atom_spheres[i].pos,
-                            axis=vector(displacements[i, 0], displacements[i, 1], displacements[i, 2]) * scale,
+                            axis=vector(displacements[i, 0], displacements[i, 1],
+                                        displacements[i, 2]) * scale * 20,
                             color=color.green)
             arrows.append(arrow_obj)
 
         # Display mode information
-        title_text = text(text=f'Mode {mode_index + 1}, Frequency: {np.sqrt(np.abs(eigenvalues_in_cm2[mode_index])):.2f} cm^-1',
-                          pos=vector(-5, 5, 0), color=color.black, billboard=True)  # Use billboard=True
+        title_text = text(
+            text=f'Mode {mode_index + 1}, Frequency: {np.sqrt(np.abs(eigenvalues_in_cm2[mode_index])):.2f} cm^-1',
+            pos=vector(-5, 5, 0), color=color.black, billboard=True, height=0.4)  # Use billboard=True
 
-        # Pause for a short time to visualize the mode
-        sleep(2)
-        title_text.visible = False #remove the text
+        # Animation loop
+        t = 0
+        dt = 0.1  # Time step
+        rate_factor = 10 # Controls the speed of the animation
+        while t < animation_time:
+            rate(rate_factor)  # Control the speed of the animation
+            for i in range(N):
+                # Calculate the displaced position of each atom
+                new_pos = positions[i] + displacements[i] * scale * np.sin(t * np.sqrt(np.abs(eigenvalues_in_cm2[mode_index])))
+                atom_spheres[i].pos = vector(new_pos[0], new_pos[1], new_pos[2])
+            t += dt
+
+        # Remove the arrows and text
+        for arrow_obj in arrows:
+            arrow_obj.visible = False
+        title_text.visible = False
 
 if __name__ == "__main__":
 
