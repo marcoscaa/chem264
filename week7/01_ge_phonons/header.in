@@ -24,7 +24,7 @@
 &ELECTRONS
     mixing_mode   = 'plain'           ! Charge density mixing scheme
     mixing_beta   = 0.5               ! Mixing factor for density mixing
-    conv_thr      = 1.0e-6            ! Convergence threshold for SCF total energy (in Ry/cell)
+    conv_thr      = 1.0e-8            ! Convergence threshold for SCF total energy (in Ry/cell)
     diagonalization = 'david'         ! Algorithm for Hamiltonian diagonalization
 /
 
@@ -33,4 +33,5 @@
 
 &CELL
 /
-
+K_POINTS automatic
+ 2 2 2  1 1 1
