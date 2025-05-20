@@ -1,7 +1,7 @@
 ! Input file for SCF calculation of bulk Germanium (Diamond Structure)
 
 &CONTROL
-    calculation   = 'scf'             ! Type of calculation: Variable-Cell
+    calculation   = 'scf'             ! Type of calculation: SCF 
     restart_mode  = 'from_scratch'    ! Start a new calculation
     prefix        = 'Ge_scf'          ! Prefix for output files (choose a descriptive name)
     pseudo_dir    = './'              ! Directory containing pseudopotential files (MODIFY AS NEEDED)
