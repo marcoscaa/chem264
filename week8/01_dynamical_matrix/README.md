@@ -25,12 +25,12 @@ sbatch sub.cmd
 
 Create the force constants matrix
 ```
-phonopy -f supercell-001.out
+phonopy -f supercell-0*.out
 ```
 
 Post-process the file - plot the phonon dispersion
 ```
-phonopy --qe -c ge_diamond.in -p band.conf
+phonopy --qe -c scf.in -p band.conf
 ```
 
 
