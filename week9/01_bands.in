@@ -1,0 +1,51 @@
+! Input file for SCF calculation of bulk Germanium (Diamond Structure)
+
+&CONTROL
+    calculation   = 'bands'           ! Type of calculation: Non Self-Consistent Field
+    restart_mode  = 'from_scratch'    ! Start a new calculation
+    prefix        = 'Ge_scf'          ! Prefix for output files (choose a descriptive name)
+    pseudo_dir    = './'              ! Directory containing pseudopotential files (MODIFY AS NEEDED)
+    outdir        = './Ge_out/'       ! Directory for output/temporary files (MUST EXIST)
+    verbosity     = 'low'             ! Level of output detail ('low', 'medium', 'high')
+/
+
+&SYSTEM
+    ibrav         = 0                 ! Bravais lattice index: 0 : CELL_PARAMETERS will be given
+    a             = 5.76              ! Lattice parameter 'a' in Angstrom units, from VC-RELAX
+    nat           = 2                 ! Number of atoms in the primitive unit cell
+    ntyp          = 1                 ! Number of types of atoms
+    ecutwfc       = 60.0              ! Kinetic energy cutoff for wavefunctions (in Ry)
+    occupations   = 'smearing'        ! Use smearing for occupations (good for convergence, essential for metals)
+    smearing      = 'gaussian'        ! Type of smearing
+    degauss       = 0.01              ! Smearing width (in Ry) - small value for semiconductors
+/
+
+&ELECTRONS
+    mixing_mode   = 'plain'           ! Charge density mixing scheme
+    mixing_beta   = 0.5               ! Mixing factor for density mixing
+    conv_thr      = 1.0e-6            ! Convergence threshold for SCF total energy (in Ry/cell)
+    diagonalization = 'david'         ! Algorithm for Hamiltonian diagonalization
+/
+
+ATOMIC_SPECIES
+  Ge      72.630   Ge.upf  ! PP file has to be in UPF format 
+
+CELL_PARAMETERS {alat}
+  0.0 0.5 0.5
+  0.5 0.0 0.5
+  0.5 0.5 0.0
+
+ATOMIC_POSITIONS {alat}
+  Ge   0.00   0.00   0.00
+  Ge   0.25   0.25   0.25
+
+K_POINTS {crystal_b} ! Crystal units in reciprocal space
+8
+  0.000  0.000  0.000   20  ! Gamma
+  0.500  0.000  0.500   20  ! X
+  0.625  0.250  0.625   20  ! U
+  0.500  0.500  0.500   20  ! L
+  0.000  0.000  0.000   20  ! Gamma
+  0.375  0.375  0.750   20  ! K 
+  0.500  0.250  0.750   20  ! W
+  0.500  0.000  0.500   20  ! X

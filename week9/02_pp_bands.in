@@ -1,0 +1,5 @@
+&BANDS
+  prefix = 'Ge_scf'
+  outdir = './Ge_out'
+  filband = 'ge_bands.dat'
+/
