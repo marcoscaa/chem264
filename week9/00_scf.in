@@ -3,7 +3,7 @@
 &CONTROL
     calculation   = 'scf'             ! Type of calculation: Self-Consistent Field
     restart_mode  = 'from_scratch'    ! Start a new calculation
-    prefix        = 'Ge_scf'          ! Prefix for output files (choose a descriptive name)
+    prefix        = 'Ge_scf'          ! This name should be the same for all input files in this folder 
     pseudo_dir    = './'              ! Directory containing pseudopotential files (MODIFY AS NEEDED)
     outdir        = './Ge_out/'       ! Directory for output/temporary files (MUST EXIST)
     verbosity     = 'low'             ! Level of output detail ('low', 'medium', 'high')

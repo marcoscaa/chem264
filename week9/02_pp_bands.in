@@ -1,5 +1,5 @@
 &BANDS
-  prefix = 'Ge_scf'
-  outdir = './Ge_out'
-  filband = 'ge_bands.dat'
+  prefix = 'Ge_scf'        ! Same prefix given in the SCF and BANDS input files
+  outdir = './Ge_out'      ! Same outdir given in the SCF and BANDS input files
+  filband = 'ge_bands.dat' ! Name of the output file used to plot the band structure
 /
