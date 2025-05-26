@@ -27,7 +27,7 @@ Now submit the job
 sbatch sub.cmd
 ```
 
-Create the force constants matric
+Create the force constants matrix
 ```
 phonopy -f supercell-001.out
 ```
