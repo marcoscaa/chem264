@@ -1,5 +1,5 @@
 
-     Program BANDS v.6.8 starts on 26May2025 at 14: 6:34 
+     Program BANDS v.6.8 starts on 26May2025 at 16:51:42 
 
      This program is part of the open-source Quantum ESPRESSO suite
      for quantum simulation of materials; please cite
@@ -15,7 +15,7 @@
      Threads/MPI process:                     1
 
      MPI processes distributed on     1 nodes
-     187858 MiB available memory on the printing compute node when the environment starts
+     187894 MiB available memory on the printing compute node when the environment starts
  
 
      Reading xml data from directory:
@@ -3043,10 +3043,10 @@ A''    1.00 -1.00
 
  **************************************************************************
  
-     BANDS        :      8.48s CPU      9.23s WALL
+     BANDS        :      8.42s CPU      9.16s WALL
 
  
-   This run was terminated on:  14: 6:43  26May2025            
+   This run was terminated on:  16:51:51  26May2025            
 
 =------------------------------------------------------------------------------=
    JOB DONE.

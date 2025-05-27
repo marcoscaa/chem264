@@ -1,5 +1,5 @@
 
-     Program PWSCF v.6.8 starts on 26May2025 at 16:51:38 
+     Program PWSCF v.6.8 starts on 26May2025 at 16:51:51 
 
      This program is part of the open-source Quantum ESPRESSO suite
      for quantum simulation of materials; please cite
@@ -17,9 +17,9 @@
      MPI processes distributed on     1 nodes
      K-points division:     npool     =       4
      R & G space division:  proc/nbgrp/npool/nimage =       2
-     187899 MiB available memory on the printing compute node when the environment starts
+     187697 MiB available memory on the printing compute node when the environment starts
  
-     Reading input from 01_bands.in
+     Reading input from 03_dos.in
 
      Current dimensions of program PWSCF are:
      Max number of different atomic species (ntypx) = 10
@@ -39,9 +39,9 @@
      Parallelization info
      --------------------
      sticks:   dense  smooth     PW     G-vecs:    dense   smooth      PW
-     Min         483     483    147                10089    10089    1607
-     Max         484     484    148                10090    10090    1608
-     Sum         967     967    295                20179    20179    3215
+     Min         483     483    150                10089    10089    1691
+     Max         484     484    151                10090    10090    1692
+     Sum         967     967    301                20179    20179    3383
  
      Using Slab Decomposition
  
@@ -99,7 +99,7 @@
          1           Ge  tau(   1) = (   0.0000000   0.0000000   0.0000000  )
          2           Ge  tau(   2) = (   0.2500000   0.2500000   0.2500000  )
 
-     number of k points=   141  Gaussian smearing, width (Ry)=  0.0100
+     number of k points=   256  Gaussian smearing, width (Ry)=  0.0100
 
      Number of k-points >= 100: set verbosity='high' to print them.
 
@@ -117,54 +117,57 @@
      Band Structure Calculation
      Davidson diagonalization with overlap
 
-     ethr =  3.57E-09,  avg # of iterations = 19.1
+     ethr =  3.57E-09,  avg # of iterations = 20.3
 
-     total cpu time spent up to now is        3.3 secs
+     total cpu time spent up to now is        5.9 secs
 
      End of band structure calculation
 
      Number of k-points >= 100: set verbosity='high' to print the bands.
 
+     the Fermi energy is     8.8325 ev
+     (compare with:     8.7649 eV, computed in scf)
+
      Writing output data file ./Ge_out/Ge_scf.save/
  
-     init_run     :      0.07s CPU      0.08s WALL (       1 calls)
-     electrons    :      2.67s CPU      3.11s WALL (       1 calls)
+     init_run     :      0.06s CPU      0.08s WALL (       1 calls)
+     electrons    :      4.82s CPU      5.59s WALL (       1 calls)
 
      Called by init_run:
      wfcinit      :      0.00s CPU      0.00s WALL (       1 calls)
-     potinit      :      0.01s CPU      0.02s WALL (       1 calls)
+     potinit      :      0.01s CPU      0.01s WALL (       1 calls)
      hinit0       :      0.01s CPU      0.02s WALL (       1 calls)
 
      Called by electrons:
-     c_bands      :      2.67s CPU      3.11s WALL (       1 calls)
+     c_bands      :      4.82s CPU      5.59s WALL (       1 calls)
      v_of_rho     :      0.01s CPU      0.01s WALL (       1 calls)
 
      Called by c_bands:
-     init_us_2    :      0.01s CPU      0.01s WALL (      36 calls)
-     cegterg      :      2.31s CPU      2.43s WALL (      41 calls)
+     init_us_2    :      0.01s CPU      0.01s WALL (      64 calls)
+     cegterg      :      4.21s CPU      4.49s WALL (      92 calls)
 
      Called by *egterg:
-     cdiaghg      :      0.22s CPU      0.22s WALL (     707 calls)
-     h_psi        :      1.92s CPU      2.04s WALL (     748 calls)
-     g_psi        :      0.03s CPU      0.03s WALL (     671 calls)
+     cdiaghg      :      0.41s CPU      0.43s WALL (    1361 calls)
+     h_psi        :      3.45s CPU      3.74s WALL (    1453 calls)
+     g_psi        :      0.05s CPU      0.05s WALL (    1297 calls)
 
      Called by h_psi:
-     h_psi:calbec :      0.07s CPU      0.07s WALL (     748 calls)
-     vloc_psi     :      1.78s CPU      1.88s WALL (     748 calls)
-     add_vuspsi   :      0.06s CPU      0.06s WALL (     748 calls)
+     h_psi:calbec :      0.12s CPU      0.14s WALL (    1453 calls)
+     vloc_psi     :      3.20s CPU      3.46s WALL (    1453 calls)
+     add_vuspsi   :      0.11s CPU      0.11s WALL (    1453 calls)
 
      General routines
-     calbec       :      0.07s CPU      0.07s WALL (     748 calls)
+     calbec       :      0.12s CPU      0.13s WALL (    1453 calls)
      fft          :      0.00s CPU      0.00s WALL (      11 calls)
-     fftw         :      1.49s CPU      1.58s WALL (   15724 calls)
-     davcio       :      0.01s CPU      0.02s WALL (      72 calls)
+     fftw         :      2.68s CPU      2.90s WALL (   28886 calls)
+     davcio       :      0.02s CPU      0.07s WALL (     128 calls)
  
      Parallel routines
  
-     PWSCF        :      2.86s CPU      3.49s WALL
+     PWSCF        :      5.17s CPU      6.23s WALL
 
  
-   This run was terminated on:  16:51:41  26May2025            
+   This run was terminated on:  16:51:58  26May2025            
 
 =------------------------------------------------------------------------------=
    JOB DONE.
