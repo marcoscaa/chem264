@@ -1,0 +1,1048 @@
+  crystal axis:  
+  (-0.5000 0.0000 0.5000)  
+  ( 0.0000 0.5000 0.5000)  
+  (-0.5000 0.5000 0.0000)  
+
+  reciprocal axis:  
+  (-1.0000-1.0000 1.0000)  
+  ( 1.0000 1.0000 1.0000)  
+  (-1.0000 1.0000-1.0000)  
+
+  Omega (in a^3 units) =   0.250000000000000     
+
+
+  48  symmetry operations
+
+  1  0  0    0  1 -1   -1  0  0    0 -1  1    0 -1  0   -1  0  1
+  0  1  0    1  0 -1   -1  0  1    0 -1  0   -1  0  0    0 -1  1
+  0  0  1    0  0 -1   -1  1  0    1 -1  0    0  0 -1    0  0  1
+
+  0  1  0    1  0 -1   -1  0  0    1  0  0    0  1 -1    0 -1  1
+  0  1 -1    1  0  0    0  0 -1    1 -1  0   -1  1  0    0  0  1
+ -1  1  0    1 -1  0    0 -1  0    1  0 -1    0  1  0   -1  0  1
+
+ -1  1  0    0  0 -1    0  0  1    1 -1  0   -1  0  1    0  1  0
+  0  1  0    0 -1  0   -1  0  1    1  0 -1   -1  1  0    0  0  1
+  0  1 -1   -1  0  0    0 -1  1    1  0  0   -1  0  0    1  0  0
+
+  1  0 -1    0 -1  0    0  0 -1   -1  1  0    0  0  1    1 -1  0
+  0  0 -1    1 -1  0    0  1 -1   -1  0  0    1  0  0    0 -1  1
+  0  1 -1    0 -1  1    1  0 -1   -1  0  1    0  1  0    0 -1  0
+
+ -1  0  0    0 -1  1    1  0  0    0  1 -1    0  1  0    1  0 -1
+  0 -1  0   -1  0  1    1  0 -1    0  1  0    1  0  0    0  1 -1
+  0  0 -1    0  0  1    1 -1  0   -1  1  0    0  0  1    0  0 -1
+
+  0 -1  0   -1  0  1    1  0  0   -1  0  0    0 -1  1    0  1 -1
+  0 -1  1   -1  0  0    0  0  1   -1  1  0    1 -1  0    0  0 -1
+  1 -1  0   -1  1  0    0  1  0   -1  0  1    0 -1  0    1  0 -1
+
+  1 -1  0    0  0  1    0  0 -1   -1  1  0    1  0 -1    0 -1  0
+  0 -1  0    0  1  0    1  0 -1   -1  0  1    1 -1  0    0  0 -1
+  0 -1  1    1  0  0    0  1 -1   -1  0  0    1  0  0   -1  0  0
+
+ -1  0  1    0  1  0    0  0  1    1 -1  0    0  0 -1   -1  1  0
+  0  0  1   -1  1  0    0 -1  1    1  0  0   -1  0  0    0  1 -1
+  0 -1  1    0  1 -1   -1  0  1    1  0 -1    0 -1  0    0  1  0
+
+
+  k(  1)=(  0  0  0 ) --- weight=  1 |folds in point #  0
+  k(  2)=(  1  0  0 ) --- weight=  8 |folds in point #  0
+  k(  3)=(  2  0  0 ) --- weight=  8 |folds in point #  0
+  k(  4)=(  3  0  0 ) --- weight=  8 |folds in point #  0
+  k(  5)=(  4  0  0 ) --- weight=  8 |folds in point #  0
+  k(  6)=(  5  0  0 ) --- weight=  4 |folds in point #  0
+  k(  7)=(  6  0  0 ) --- weight=  0 |folds in point #  5
+  k(  8)=(  7  0  0 ) --- weight=  0 |folds in point #  4
+  k(  9)=(  8  0  0 ) --- weight=  0 |folds in point #  3
+  k( 10)=(  9  0  0 ) --- weight=  0 |folds in point #  2
+  k( 11)=(  0  1  0 ) --- weight=  0 |folds in point #  2
+  k( 12)=(  1  1  0 ) --- weight=  6 |folds in point #  0
+  k( 13)=(  2  1  0 ) --- weight= 24 |folds in point #  0
+  k( 14)=(  3  1  0 ) --- weight= 24 |folds in point #  0
+  k( 15)=(  4  1  0 ) --- weight= 24 |folds in point #  0
+  k( 16)=(  5  1  0 ) --- weight= 24 |folds in point #  0
+  k( 17)=(  6  1  0 ) --- weight= 24 |folds in point #  0
+  k( 18)=(  7  1  0 ) --- weight= 24 |folds in point #  0
+  k( 19)=(  8  1  0 ) --- weight= 24 |folds in point #  0
+  k( 20)=(  9  1  0 ) --- weight= 12 |folds in point #  0
+  k( 21)=(  0  2  0 ) --- weight=  0 |folds in point #  3
+  k( 22)=(  1  2  0 ) --- weight=  0 |folds in point # 13
+  k( 23)=(  2  2  0 ) --- weight=  6 |folds in point #  0
+  k( 24)=(  3  2  0 ) --- weight= 24 |folds in point #  0
+  k( 25)=(  4  2  0 ) --- weight= 24 |folds in point #  0
+  k( 26)=(  5  2  0 ) --- weight= 24 |folds in point #  0
+  k( 27)=(  6  2  0 ) --- weight= 24 |folds in point #  0
+  k( 28)=(  7  2  0 ) --- weight= 24 |folds in point #  0
+  k( 29)=(  8  2  0 ) --- weight= 12 |folds in point #  0
+  k( 30)=(  9  2  0 ) --- weight=  0 |folds in point # 19
+  k( 31)=(  0  3  0 ) --- weight=  0 |folds in point #  4
+  k( 32)=(  1  3  0 ) --- weight=  0 |folds in point # 14
+  k( 33)=(  2  3  0 ) --- weight=  0 |folds in point # 24
+  k( 34)=(  3  3  0 ) --- weight=  6 |folds in point #  0
+  k( 35)=(  4  3  0 ) --- weight= 24 |folds in point #  0
+  k( 36)=(  5  3  0 ) --- weight= 24 |folds in point #  0
+  k( 37)=(  6  3  0 ) --- weight= 24 |folds in point #  0
+  k( 38)=(  7  3  0 ) --- weight= 12 |folds in point #  0
+  k( 39)=(  8  3  0 ) --- weight=  0 |folds in point # 28
+  k( 40)=(  9  3  0 ) --- weight=  0 |folds in point # 18
+  k( 41)=(  0  4  0 ) --- weight=  0 |folds in point #  5
+  k( 42)=(  1  4  0 ) --- weight=  0 |folds in point # 15
+  k( 43)=(  2  4  0 ) --- weight=  0 |folds in point # 25
+  k( 44)=(  3  4  0 ) --- weight=  0 |folds in point # 35
+  k( 45)=(  4  4  0 ) --- weight=  6 |folds in point #  0
+  k( 46)=(  5  4  0 ) --- weight= 24 |folds in point #  0
+  k( 47)=(  6  4  0 ) --- weight= 12 |folds in point #  0
+  k( 48)=(  7  4  0 ) --- weight=  0 |folds in point # 37
+  k( 49)=(  8  4  0 ) --- weight=  0 |folds in point # 27
+  k( 50)=(  9  4  0 ) --- weight=  0 |folds in point # 17
+  k( 51)=(  0  5  0 ) --- weight=  0 |folds in point #  6
+  k( 52)=(  1  5  0 ) --- weight=  0 |folds in point # 16
+  k( 53)=(  2  5  0 ) --- weight=  0 |folds in point # 26
+  k( 54)=(  3  5  0 ) --- weight=  0 |folds in point # 36
+  k( 55)=(  4  5  0 ) --- weight=  0 |folds in point # 46
+  k( 56)=(  5  5  0 ) --- weight=  3 |folds in point #  0
+  k( 57)=(  6  5  0 ) --- weight=  0 |folds in point # 46
+  k( 58)=(  7  5  0 ) --- weight=  0 |folds in point # 36
+  k( 59)=(  8  5  0 ) --- weight=  0 |folds in point # 26
+  k( 60)=(  9  5  0 ) --- weight=  0 |folds in point # 16
+  k( 61)=(  0  6  0 ) --- weight=  0 |folds in point #  5
+  k( 62)=(  1  6  0 ) --- weight=  0 |folds in point # 17
+  k( 63)=(  2  6  0 ) --- weight=  0 |folds in point # 27
+  k( 64)=(  3  6  0 ) --- weight=  0 |folds in point # 37
+  k( 65)=(  4  6  0 ) --- weight=  0 |folds in point # 47
+  k( 66)=(  5  6  0 ) --- weight=  0 |folds in point # 46
+  k( 67)=(  6  6  0 ) --- weight=  0 |folds in point # 45
+  k( 68)=(  7  6  0 ) --- weight=  0 |folds in point # 35
+  k( 69)=(  8  6  0 ) --- weight=  0 |folds in point # 25
+  k( 70)=(  9  6  0 ) --- weight=  0 |folds in point # 15
+  k( 71)=(  0  7  0 ) --- weight=  0 |folds in point #  4
+  k( 72)=(  1  7  0 ) --- weight=  0 |folds in point # 18
+  k( 73)=(  2  7  0 ) --- weight=  0 |folds in point # 28
+  k( 74)=(  3  7  0 ) --- weight=  0 |folds in point # 38
+  k( 75)=(  4  7  0 ) --- weight=  0 |folds in point # 37
+  k( 76)=(  5  7  0 ) --- weight=  0 |folds in point # 36
+  k( 77)=(  6  7  0 ) --- weight=  0 |folds in point # 35
+  k( 78)=(  7  7  0 ) --- weight=  0 |folds in point # 34
+  k( 79)=(  8  7  0 ) --- weight=  0 |folds in point # 24
+  k( 80)=(  9  7  0 ) --- weight=  0 |folds in point # 14
+  k( 81)=(  0  8  0 ) --- weight=  0 |folds in point #  3
+  k( 82)=(  1  8  0 ) --- weight=  0 |folds in point # 19
+  k( 83)=(  2  8  0 ) --- weight=  0 |folds in point # 29
+  k( 84)=(  3  8  0 ) --- weight=  0 |folds in point # 28
+  k( 85)=(  4  8  0 ) --- weight=  0 |folds in point # 27
+  k( 86)=(  5  8  0 ) --- weight=  0 |folds in point # 26
+  k( 87)=(  6  8  0 ) --- weight=  0 |folds in point # 25
+  k( 88)=(  7  8  0 ) --- weight=  0 |folds in point # 24
+  k( 89)=(  8  8  0 ) --- weight=  0 |folds in point # 23
+  k( 90)=(  9  8  0 ) --- weight=  0 |folds in point # 13
+  k( 91)=(  0  9  0 ) --- weight=  0 |folds in point #  2
+  k( 92)=(  1  9  0 ) --- weight=  0 |folds in point # 20
+  k( 93)=(  2  9  0 ) --- weight=  0 |folds in point # 19
+  k( 94)=(  3  9  0 ) --- weight=  0 |folds in point # 18
+  k( 95)=(  4  9  0 ) --- weight=  0 |folds in point # 17
+  k( 96)=(  5  9  0 ) --- weight=  0 |folds in point # 16
+  k( 97)=(  6  9  0 ) --- weight=  0 |folds in point # 15
+  k( 98)=(  7  9  0 ) --- weight=  0 |folds in point # 14
+  k( 99)=(  8  9  0 ) --- weight=  0 |folds in point # 13
+  k(100)=(  9  9  0 ) --- weight=  0 |folds in point # 12
+  k(101)=(  0  0  1 ) --- weight=  0 |folds in point #  2
+  k(102)=(  1  0  1 ) --- weight=  0 |folds in point # 12
+  k(103)=(  2  0  1 ) --- weight=  0 |folds in point # 13
+  k(104)=(  3  0  1 ) --- weight=  0 |folds in point # 14
+  k(105)=(  4  0  1 ) --- weight=  0 |folds in point # 15
+  k(106)=(  5  0  1 ) --- weight=  0 |folds in point # 16
+  k(107)=(  6  0  1 ) --- weight=  0 |folds in point # 17
+  k(108)=(  7  0  1 ) --- weight=  0 |folds in point # 18
+  k(109)=(  8  0  1 ) --- weight=  0 |folds in point # 19
+  k(110)=(  9  0  1 ) --- weight=  0 |folds in point # 20
+  k(111)=(  0  1  1 ) --- weight=  0 |folds in point # 12
+  k(112)=(  1  1  1 ) --- weight=  0 |folds in point #  2
+  k(113)=(  2  1  1 ) --- weight=  0 |folds in point # 20
+  k(114)=(  3  1  1 ) --- weight=  0 |folds in point # 19
+  k(115)=(  4  1  1 ) --- weight=  0 |folds in point # 18
+  k(116)=(  5  1  1 ) --- weight=  0 |folds in point # 17
+  k(117)=(  6  1  1 ) --- weight=  0 |folds in point # 16
+  k(118)=(  7  1  1 ) --- weight=  0 |folds in point # 15
+  k(119)=(  8  1  1 ) --- weight=  0 |folds in point # 14
+  k(120)=(  9  1  1 ) --- weight=  0 |folds in point # 13
+  k(121)=(  0  2  1 ) --- weight=  0 |folds in point # 13
+  k(122)=(  1  2  1 ) --- weight=  0 |folds in point # 20
+  k(123)=(  2  2  1 ) --- weight=  0 |folds in point # 13
+  k(124)=(  3  2  1 ) --- weight= 24 |folds in point #  0
+  k(125)=(  4  2  1 ) --- weight= 48 |folds in point #  0
+  k(126)=(  5  2  1 ) --- weight= 48 |folds in point #  0
+  k(127)=(  6  2  1 ) --- weight= 24 |folds in point #  0
+  k(128)=(  7  2  1 ) --- weight=  0 |folds in point #126
+  k(129)=(  8  2  1 ) --- weight=  0 |folds in point #125
+  k(130)=(  9  2  1 ) --- weight=  0 |folds in point #124
+  k(131)=(  0  3  1 ) --- weight=  0 |folds in point # 14
+  k(132)=(  1  3  1 ) --- weight=  0 |folds in point # 19
+  k(133)=(  2  3  1 ) --- weight=  0 |folds in point #124
+  k(134)=(  3  3  1 ) --- weight=  0 |folds in point # 24
+  k(135)=(  4  3  1 ) --- weight= 24 |folds in point #  0
+  k(136)=(  5  3  1 ) --- weight= 48 |folds in point #  0
+  k(137)=(  6  3  1 ) --- weight= 48 |folds in point #  0
+  k(138)=(  7  3  1 ) --- weight= 48 |folds in point #  0
+  k(139)=(  8  3  1 ) --- weight= 24 |folds in point #  0
+  k(140)=(  9  3  1 ) --- weight=  0 |folds in point #125
+  k(141)=(  0  4  1 ) --- weight=  0 |folds in point # 15
+  k(142)=(  1  4  1 ) --- weight=  0 |folds in point # 18
+  k(143)=(  2  4  1 ) --- weight=  0 |folds in point #125
+  k(144)=(  3  4  1 ) --- weight=  0 |folds in point #135
+  k(145)=(  4  4  1 ) --- weight=  0 |folds in point # 35
+  k(146)=(  5  4  1 ) --- weight= 24 |folds in point #  0
+  k(147)=(  6  4  1 ) --- weight= 48 |folds in point #  0
+  k(148)=(  7  4  1 ) --- weight= 24 |folds in point #  0
+  k(149)=(  8  4  1 ) --- weight=  0 |folds in point #138
+  k(150)=(  9  4  1 ) --- weight=  0 |folds in point #126
+  k(151)=(  0  5  1 ) --- weight=  0 |folds in point # 16
+  k(152)=(  1  5  1 ) --- weight=  0 |folds in point # 17
+  k(153)=(  2  5  1 ) --- weight=  0 |folds in point #126
+  k(154)=(  3  5  1 ) --- weight=  0 |folds in point #136
+  k(155)=(  4  5  1 ) --- weight=  0 |folds in point #146
+  k(156)=(  5  5  1 ) --- weight=  0 |folds in point # 46
+  k(157)=(  6  5  1 ) --- weight= 12 |folds in point #  0
+  k(158)=(  7  5  1 ) --- weight=  0 |folds in point #147
+  k(159)=(  8  5  1 ) --- weight=  0 |folds in point #137
+  k(160)=(  9  5  1 ) --- weight=  0 |folds in point #127
+  k(161)=(  0  6  1 ) --- weight=  0 |folds in point # 17
+  k(162)=(  1  6  1 ) --- weight=  0 |folds in point # 16
+  k(163)=(  2  6  1 ) --- weight=  0 |folds in point #127
+  k(164)=(  3  6  1 ) --- weight=  0 |folds in point #137
+  k(165)=(  4  6  1 ) --- weight=  0 |folds in point #147
+  k(166)=(  5  6  1 ) --- weight=  0 |folds in point #157
+  k(167)=(  6  6  1 ) --- weight=  0 |folds in point # 46
+  k(168)=(  7  6  1 ) --- weight=  0 |folds in point #146
+  k(169)=(  8  6  1 ) --- weight=  0 |folds in point #136
+  k(170)=(  9  6  1 ) --- weight=  0 |folds in point #126
+  k(171)=(  0  7  1 ) --- weight=  0 |folds in point # 18
+  k(172)=(  1  7  1 ) --- weight=  0 |folds in point # 15
+  k(173)=(  2  7  1 ) --- weight=  0 |folds in point #126
+  k(174)=(  3  7  1 ) --- weight=  0 |folds in point #138
+  k(175)=(  4  7  1 ) --- weight=  0 |folds in point #148
+  k(176)=(  5  7  1 ) --- weight=  0 |folds in point #147
+  k(177)=(  6  7  1 ) --- weight=  0 |folds in point #146
+  k(178)=(  7  7  1 ) --- weight=  0 |folds in point # 35
+  k(179)=(  8  7  1 ) --- weight=  0 |folds in point #135
+  k(180)=(  9  7  1 ) --- weight=  0 |folds in point #125
+  k(181)=(  0  8  1 ) --- weight=  0 |folds in point # 19
+  k(182)=(  1  8  1 ) --- weight=  0 |folds in point # 14
+  k(183)=(  2  8  1 ) --- weight=  0 |folds in point #125
+  k(184)=(  3  8  1 ) --- weight=  0 |folds in point #139
+  k(185)=(  4  8  1 ) --- weight=  0 |folds in point #138
+  k(186)=(  5  8  1 ) --- weight=  0 |folds in point #137
+  k(187)=(  6  8  1 ) --- weight=  0 |folds in point #136
+  k(188)=(  7  8  1 ) --- weight=  0 |folds in point #135
+  k(189)=(  8  8  1 ) --- weight=  0 |folds in point # 24
+  k(190)=(  9  8  1 ) --- weight=  0 |folds in point #124
+  k(191)=(  0  9  1 ) --- weight=  0 |folds in point # 20
+  k(192)=(  1  9  1 ) --- weight=  0 |folds in point # 13
+  k(193)=(  2  9  1 ) --- weight=  0 |folds in point #124
+  k(194)=(  3  9  1 ) --- weight=  0 |folds in point #125
+  k(195)=(  4  9  1 ) --- weight=  0 |folds in point #126
+  k(196)=(  5  9  1 ) --- weight=  0 |folds in point #127
+  k(197)=(  6  9  1 ) --- weight=  0 |folds in point #126
+  k(198)=(  7  9  1 ) --- weight=  0 |folds in point #125
+  k(199)=(  8  9  1 ) --- weight=  0 |folds in point #124
+  k(200)=(  9  9  1 ) --- weight=  0 |folds in point # 13
+  k(201)=(  0  0  2 ) --- weight=  0 |folds in point #  3
+  k(202)=(  1  0  2 ) --- weight=  0 |folds in point # 13
+  k(203)=(  2  0  2 ) --- weight=  0 |folds in point # 23
+  k(204)=(  3  0  2 ) --- weight=  0 |folds in point # 24
+  k(205)=(  4  0  2 ) --- weight=  0 |folds in point # 25
+  k(206)=(  5  0  2 ) --- weight=  0 |folds in point # 26
+  k(207)=(  6  0  2 ) --- weight=  0 |folds in point # 27
+  k(208)=(  7  0  2 ) --- weight=  0 |folds in point # 28
+  k(209)=(  8  0  2 ) --- weight=  0 |folds in point # 29
+  k(210)=(  9  0  2 ) --- weight=  0 |folds in point # 19
+  k(211)=(  0  1  2 ) --- weight=  0 |folds in point # 13
+  k(212)=(  1  1  2 ) --- weight=  0 |folds in point # 20
+  k(213)=(  2  1  2 ) --- weight=  0 |folds in point # 13
+  k(214)=(  3  1  2 ) --- weight=  0 |folds in point #124
+  k(215)=(  4  1  2 ) --- weight=  0 |folds in point #125
+  k(216)=(  5  1  2 ) --- weight=  0 |folds in point #126
+  k(217)=(  6  1  2 ) --- weight=  0 |folds in point #127
+  k(218)=(  7  1  2 ) --- weight=  0 |folds in point #126
+  k(219)=(  8  1  2 ) --- weight=  0 |folds in point #125
+  k(220)=(  9  1  2 ) --- weight=  0 |folds in point #124
+  k(221)=(  0  2  2 ) --- weight=  0 |folds in point # 23
+  k(222)=(  1  2  2 ) --- weight=  0 |folds in point # 13
+  k(223)=(  2  2  2 ) --- weight=  0 |folds in point #  3
+  k(224)=(  3  2  2 ) --- weight=  0 |folds in point # 19
+  k(225)=(  4  2  2 ) --- weight=  0 |folds in point # 29
+  k(226)=(  5  2  2 ) --- weight=  0 |folds in point # 28
+  k(227)=(  6  2  2 ) --- weight=  0 |folds in point # 27
+  k(228)=(  7  2  2 ) --- weight=  0 |folds in point # 26
+  k(229)=(  8  2  2 ) --- weight=  0 |folds in point # 25
+  k(230)=(  9  2  2 ) --- weight=  0 |folds in point # 24
+  k(231)=(  0  3  2 ) --- weight=  0 |folds in point # 24
+  k(232)=(  1  3  2 ) --- weight=  0 |folds in point #124
+  k(233)=(  2  3  2 ) --- weight=  0 |folds in point # 19
+  k(234)=(  3  3  2 ) --- weight=  0 |folds in point # 14
+  k(235)=(  4  3  2 ) --- weight=  0 |folds in point #125
+  k(236)=(  5  3  2 ) --- weight=  0 |folds in point #139
+  k(237)=(  6  3  2 ) --- weight=  0 |folds in point #138
+  k(238)=(  7  3  2 ) --- weight=  0 |folds in point #137
+  k(239)=(  8  3  2 ) --- weight=  0 |folds in point #136
+  k(240)=(  9  3  2 ) --- weight=  0 |folds in point #135
+  k(241)=(  0  4  2 ) --- weight=  0 |folds in point # 25
+  k(242)=(  1  4  2 ) --- weight=  0 |folds in point #125
+  k(243)=(  2  4  2 ) --- weight=  0 |folds in point # 29
+  k(244)=(  3  4  2 ) --- weight=  0 |folds in point #125
+  k(245)=(  4  4  2 ) --- weight=  0 |folds in point # 25
+  k(246)=(  5  4  2 ) --- weight=  0 |folds in point #136
+  k(247)=(  6  4  2 ) --- weight= 24 |folds in point #  0
+  k(248)=(  7  4  2 ) --- weight= 24 |folds in point #  0
+  k(249)=(  8  4  2 ) --- weight=  0 |folds in point #247
+  k(250)=(  9  4  2 ) --- weight=  0 |folds in point #136
+  k(251)=(  0  5  2 ) --- weight=  0 |folds in point # 26
+  k(252)=(  1  5  2 ) --- weight=  0 |folds in point #126
+  k(253)=(  2  5  2 ) --- weight=  0 |folds in point # 28
+  k(254)=(  3  5  2 ) --- weight=  0 |folds in point #139
+  k(255)=(  4  5  2 ) --- weight=  0 |folds in point #136
+  k(256)=(  5  5  2 ) --- weight=  0 |folds in point # 36
+  k(257)=(  6  5  2 ) --- weight=  0 |folds in point #147
+  k(258)=(  7  5  2 ) --- weight= 12 |folds in point #  0
+  k(259)=(  8  5  2 ) --- weight=  0 |folds in point #248
+  k(260)=(  9  5  2 ) --- weight=  0 |folds in point #137
+  k(261)=(  0  6  2 ) --- weight=  0 |folds in point # 27
+  k(262)=(  1  6  2 ) --- weight=  0 |folds in point #127
+  k(263)=(  2  6  2 ) --- weight=  0 |folds in point # 27
+  k(264)=(  3  6  2 ) --- weight=  0 |folds in point #138
+  k(265)=(  4  6  2 ) --- weight=  0 |folds in point #247
+  k(266)=(  5  6  2 ) --- weight=  0 |folds in point #147
+  k(267)=(  6  6  2 ) --- weight=  0 |folds in point # 47
+  k(268)=(  7  6  2 ) --- weight=  0 |folds in point #147
+  k(269)=(  8  6  2 ) --- weight=  0 |folds in point #247
+  k(270)=(  9  6  2 ) --- weight=  0 |folds in point #138
+  k(271)=(  0  7  2 ) --- weight=  0 |folds in point # 28
+  k(272)=(  1  7  2 ) --- weight=  0 |folds in point #126
+  k(273)=(  2  7  2 ) --- weight=  0 |folds in point # 26
+  k(274)=(  3  7  2 ) --- weight=  0 |folds in point #137
+  k(275)=(  4  7  2 ) --- weight=  0 |folds in point #248
+  k(276)=(  5  7  2 ) --- weight=  0 |folds in point #258
+  k(277)=(  6  7  2 ) --- weight=  0 |folds in point #147
+  k(278)=(  7  7  2 ) --- weight=  0 |folds in point # 36
+  k(279)=(  8  7  2 ) --- weight=  0 |folds in point #136
+  k(280)=(  9  7  2 ) --- weight=  0 |folds in point #139
+  k(281)=(  0  8  2 ) --- weight=  0 |folds in point # 29
+  k(282)=(  1  8  2 ) --- weight=  0 |folds in point #125
+  k(283)=(  2  8  2 ) --- weight=  0 |folds in point # 25
+  k(284)=(  3  8  2 ) --- weight=  0 |folds in point #136
+  k(285)=(  4  8  2 ) --- weight=  0 |folds in point #247
+  k(286)=(  5  8  2 ) --- weight=  0 |folds in point #248
+  k(287)=(  6  8  2 ) --- weight=  0 |folds in point #247
+  k(288)=(  7  8  2 ) --- weight=  0 |folds in point #136
+  k(289)=(  8  8  2 ) --- weight=  0 |folds in point # 25
+  k(290)=(  9  8  2 ) --- weight=  0 |folds in point #125
+  k(291)=(  0  9  2 ) --- weight=  0 |folds in point # 19
+  k(292)=(  1  9  2 ) --- weight=  0 |folds in point #124
+  k(293)=(  2  9  2 ) --- weight=  0 |folds in point # 24
+  k(294)=(  3  9  2 ) --- weight=  0 |folds in point #135
+  k(295)=(  4  9  2 ) --- weight=  0 |folds in point #136
+  k(296)=(  5  9  2 ) --- weight=  0 |folds in point #137
+  k(297)=(  6  9  2 ) --- weight=  0 |folds in point #138
+  k(298)=(  7  9  2 ) --- weight=  0 |folds in point #139
+  k(299)=(  8  9  2 ) --- weight=  0 |folds in point #125
+  k(300)=(  9  9  2 ) --- weight=  0 |folds in point # 14
+  k(301)=(  0  0  3 ) --- weight=  0 |folds in point #  4
+  k(302)=(  1  0  3 ) --- weight=  0 |folds in point # 14
+  k(303)=(  2  0  3 ) --- weight=  0 |folds in point # 24
+  k(304)=(  3  0  3 ) --- weight=  0 |folds in point # 34
+  k(305)=(  4  0  3 ) --- weight=  0 |folds in point # 35
+  k(306)=(  5  0  3 ) --- weight=  0 |folds in point # 36
+  k(307)=(  6  0  3 ) --- weight=  0 |folds in point # 37
+  k(308)=(  7  0  3 ) --- weight=  0 |folds in point # 38
+  k(309)=(  8  0  3 ) --- weight=  0 |folds in point # 28
+  k(310)=(  9  0  3 ) --- weight=  0 |folds in point # 18
+  k(311)=(  0  1  3 ) --- weight=  0 |folds in point # 14
+  k(312)=(  1  1  3 ) --- weight=  0 |folds in point # 19
+  k(313)=(  2  1  3 ) --- weight=  0 |folds in point #124
+  k(314)=(  3  1  3 ) --- weight=  0 |folds in point # 24
+  k(315)=(  4  1  3 ) --- weight=  0 |folds in point #135
+  k(316)=(  5  1  3 ) --- weight=  0 |folds in point #136
+  k(317)=(  6  1  3 ) --- weight=  0 |folds in point #137
+  k(318)=(  7  1  3 ) --- weight=  0 |folds in point #138
+  k(319)=(  8  1  3 ) --- weight=  0 |folds in point #139
+  k(320)=(  9  1  3 ) --- weight=  0 |folds in point #125
+  k(321)=(  0  2  3 ) --- weight=  0 |folds in point # 24
+  k(322)=(  1  2  3 ) --- weight=  0 |folds in point #124
+  k(323)=(  2  2  3 ) --- weight=  0 |folds in point # 19
+  k(324)=(  3  2  3 ) --- weight=  0 |folds in point # 14
+  k(325)=(  4  2  3 ) --- weight=  0 |folds in point #125
+  k(326)=(  5  2  3 ) --- weight=  0 |folds in point #139
+  k(327)=(  6  2  3 ) --- weight=  0 |folds in point #138
+  k(328)=(  7  2  3 ) --- weight=  0 |folds in point #137
+  k(329)=(  8  2  3 ) --- weight=  0 |folds in point #136
+  k(330)=(  9  2  3 ) --- weight=  0 |folds in point #135
+  k(331)=(  0  3  3 ) --- weight=  0 |folds in point # 34
+  k(332)=(  1  3  3 ) --- weight=  0 |folds in point # 24
+  k(333)=(  2  3  3 ) --- weight=  0 |folds in point # 14
+  k(334)=(  3  3  3 ) --- weight=  0 |folds in point #  4
+  k(335)=(  4  3  3 ) --- weight=  0 |folds in point # 18
+  k(336)=(  5  3  3 ) --- weight=  0 |folds in point # 28
+  k(337)=(  6  3  3 ) --- weight=  0 |folds in point # 38
+  k(338)=(  7  3  3 ) --- weight=  0 |folds in point # 37
+  k(339)=(  8  3  3 ) --- weight=  0 |folds in point # 36
+  k(340)=(  9  3  3 ) --- weight=  0 |folds in point # 35
+  k(341)=(  0  4  3 ) --- weight=  0 |folds in point # 35
+  k(342)=(  1  4  3 ) --- weight=  0 |folds in point #135
+  k(343)=(  2  4  3 ) --- weight=  0 |folds in point #125
+  k(344)=(  3  4  3 ) --- weight=  0 |folds in point # 18
+  k(345)=(  4  4  3 ) --- weight=  0 |folds in point # 15
+  k(346)=(  5  4  3 ) --- weight=  0 |folds in point #126
+  k(347)=(  6  4  3 ) --- weight=  0 |folds in point #138
+  k(348)=(  7  4  3 ) --- weight=  0 |folds in point #148
+  k(349)=(  8  4  3 ) --- weight=  0 |folds in point #147
+  k(350)=(  9  4  3 ) --- weight=  0 |folds in point #146
+  k(351)=(  0  5  3 ) --- weight=  0 |folds in point # 36
+  k(352)=(  1  5  3 ) --- weight=  0 |folds in point #136
+  k(353)=(  2  5  3 ) --- weight=  0 |folds in point #139
+  k(354)=(  3  5  3 ) --- weight=  0 |folds in point # 28
+  k(355)=(  4  5  3 ) --- weight=  0 |folds in point #126
+  k(356)=(  5  5  3 ) --- weight=  0 |folds in point # 26
+  k(357)=(  6  5  3 ) --- weight=  0 |folds in point #137
+  k(358)=(  7  5  3 ) --- weight=  0 |folds in point #248
+  k(359)=(  8  5  3 ) --- weight=  0 |folds in point #258
+  k(360)=(  9  5  3 ) --- weight=  0 |folds in point #147
+  k(361)=(  0  6  3 ) --- weight=  0 |folds in point # 37
+  k(362)=(  1  6  3 ) --- weight=  0 |folds in point #137
+  k(363)=(  2  6  3 ) --- weight=  0 |folds in point #138
+  k(364)=(  3  6  3 ) --- weight=  0 |folds in point # 38
+  k(365)=(  4  6  3 ) --- weight=  0 |folds in point #138
+  k(366)=(  5  6  3 ) --- weight=  0 |folds in point #137
+  k(367)=(  6  6  3 ) --- weight=  0 |folds in point # 37
+  k(368)=(  7  6  3 ) --- weight=  0 |folds in point #148
+  k(369)=(  8  6  3 ) --- weight=  0 |folds in point #248
+  k(370)=(  9  6  3 ) --- weight=  0 |folds in point #148
+  k(371)=(  0  7  3 ) --- weight=  0 |folds in point # 38
+  k(372)=(  1  7  3 ) --- weight=  0 |folds in point #138
+  k(373)=(  2  7  3 ) --- weight=  0 |folds in point #137
+  k(374)=(  3  7  3 ) --- weight=  0 |folds in point # 37
+  k(375)=(  4  7  3 ) --- weight=  0 |folds in point #148
+  k(376)=(  5  7  3 ) --- weight=  0 |folds in point #248
+  k(377)=(  6  7  3 ) --- weight=  0 |folds in point #148
+  k(378)=(  7  7  3 ) --- weight=  0 |folds in point # 37
+  k(379)=(  8  7  3 ) --- weight=  0 |folds in point #137
+  k(380)=(  9  7  3 ) --- weight=  0 |folds in point #138
+  k(381)=(  0  8  3 ) --- weight=  0 |folds in point # 28
+  k(382)=(  1  8  3 ) --- weight=  0 |folds in point #139
+  k(383)=(  2  8  3 ) --- weight=  0 |folds in point #136
+  k(384)=(  3  8  3 ) --- weight=  0 |folds in point # 36
+  k(385)=(  4  8  3 ) --- weight=  0 |folds in point #147
+  k(386)=(  5  8  3 ) --- weight=  0 |folds in point #258
+  k(387)=(  6  8  3 ) --- weight=  0 |folds in point #248
+  k(388)=(  7  8  3 ) --- weight=  0 |folds in point #137
+  k(389)=(  8  8  3 ) --- weight=  0 |folds in point # 26
+  k(390)=(  9  8  3 ) --- weight=  0 |folds in point #126
+  k(391)=(  0  9  3 ) --- weight=  0 |folds in point # 18
+  k(392)=(  1  9  3 ) --- weight=  0 |folds in point #125
+  k(393)=(  2  9  3 ) --- weight=  0 |folds in point #135
+  k(394)=(  3  9  3 ) --- weight=  0 |folds in point # 35
+  k(395)=(  4  9  3 ) --- weight=  0 |folds in point #146
+  k(396)=(  5  9  3 ) --- weight=  0 |folds in point #147
+  k(397)=(  6  9  3 ) --- weight=  0 |folds in point #148
+  k(398)=(  7  9  3 ) --- weight=  0 |folds in point #138
+  k(399)=(  8  9  3 ) --- weight=  0 |folds in point #126
+  k(400)=(  9  9  3 ) --- weight=  0 |folds in point # 15
+  k(401)=(  0  0  4 ) --- weight=  0 |folds in point #  5
+  k(402)=(  1  0  4 ) --- weight=  0 |folds in point # 15
+  k(403)=(  2  0  4 ) --- weight=  0 |folds in point # 25
+  k(404)=(  3  0  4 ) --- weight=  0 |folds in point # 35
+  k(405)=(  4  0  4 ) --- weight=  0 |folds in point # 45
+  k(406)=(  5  0  4 ) --- weight=  0 |folds in point # 46
+  k(407)=(  6  0  4 ) --- weight=  0 |folds in point # 47
+  k(408)=(  7  0  4 ) --- weight=  0 |folds in point # 37
+  k(409)=(  8  0  4 ) --- weight=  0 |folds in point # 27
+  k(410)=(  9  0  4 ) --- weight=  0 |folds in point # 17
+  k(411)=(  0  1  4 ) --- weight=  0 |folds in point # 15
+  k(412)=(  1  1  4 ) --- weight=  0 |folds in point # 18
+  k(413)=(  2  1  4 ) --- weight=  0 |folds in point #125
+  k(414)=(  3  1  4 ) --- weight=  0 |folds in point #135
+  k(415)=(  4  1  4 ) --- weight=  0 |folds in point # 35
+  k(416)=(  5  1  4 ) --- weight=  0 |folds in point #146
+  k(417)=(  6  1  4 ) --- weight=  0 |folds in point #147
+  k(418)=(  7  1  4 ) --- weight=  0 |folds in point #148
+  k(419)=(  8  1  4 ) --- weight=  0 |folds in point #138
+  k(420)=(  9  1  4 ) --- weight=  0 |folds in point #126
+  k(421)=(  0  2  4 ) --- weight=  0 |folds in point # 25
+  k(422)=(  1  2  4 ) --- weight=  0 |folds in point #125
+  k(423)=(  2  2  4 ) --- weight=  0 |folds in point # 29
+  k(424)=(  3  2  4 ) --- weight=  0 |folds in point #125
+  k(425)=(  4  2  4 ) --- weight=  0 |folds in point # 25
+  k(426)=(  5  2  4 ) --- weight=  0 |folds in point #136
+  k(427)=(  6  2  4 ) --- weight=  0 |folds in point #247
+  k(428)=(  7  2  4 ) --- weight=  0 |folds in point #248
+  k(429)=(  8  2  4 ) --- weight=  0 |folds in point #247
+  k(430)=(  9  2  4 ) --- weight=  0 |folds in point #136
+  k(431)=(  0  3  4 ) --- weight=  0 |folds in point # 35
+  k(432)=(  1  3  4 ) --- weight=  0 |folds in point #135
+  k(433)=(  2  3  4 ) --- weight=  0 |folds in point #125
+  k(434)=(  3  3  4 ) --- weight=  0 |folds in point # 18
+  k(435)=(  4  3  4 ) --- weight=  0 |folds in point # 15
+  k(436)=(  5  3  4 ) --- weight=  0 |folds in point #126
+  k(437)=(  6  3  4 ) --- weight=  0 |folds in point #138
+  k(438)=(  7  3  4 ) --- weight=  0 |folds in point #148
+  k(439)=(  8  3  4 ) --- weight=  0 |folds in point #147
+  k(440)=(  9  3  4 ) --- weight=  0 |folds in point #146
+  k(441)=(  0  4  4 ) --- weight=  0 |folds in point # 45
+  k(442)=(  1  4  4 ) --- weight=  0 |folds in point # 35
+  k(443)=(  2  4  4 ) --- weight=  0 |folds in point # 25
+  k(444)=(  3  4  4 ) --- weight=  0 |folds in point # 15
+  k(445)=(  4  4  4 ) --- weight=  0 |folds in point #  5
+  k(446)=(  5  4  4 ) --- weight=  0 |folds in point # 17
+  k(447)=(  6  4  4 ) --- weight=  0 |folds in point # 27
+  k(448)=(  7  4  4 ) --- weight=  0 |folds in point # 37
+  k(449)=(  8  4  4 ) --- weight=  0 |folds in point # 47
+  k(450)=(  9  4  4 ) --- weight=  0 |folds in point # 46
+  k(451)=(  0  5  4 ) --- weight=  0 |folds in point # 46
+  k(452)=(  1  5  4 ) --- weight=  0 |folds in point #146
+  k(453)=(  2  5  4 ) --- weight=  0 |folds in point #136
+  k(454)=(  3  5  4 ) --- weight=  0 |folds in point #126
+  k(455)=(  4  5  4 ) --- weight=  0 |folds in point # 17
+  k(456)=(  5  5  4 ) --- weight=  0 |folds in point # 16
+  k(457)=(  6  5  4 ) --- weight=  0 |folds in point #127
+  k(458)=(  7  5  4 ) --- weight=  0 |folds in point #137
+  k(459)=(  8  5  4 ) --- weight=  0 |folds in point #147
+  k(460)=(  9  5  4 ) --- weight=  0 |folds in point #157
+  k(461)=(  0  6  4 ) --- weight=  0 |folds in point # 47
+  k(462)=(  1  6  4 ) --- weight=  0 |folds in point #147
+  k(463)=(  2  6  4 ) --- weight=  0 |folds in point #247
+  k(464)=(  3  6  4 ) --- weight=  0 |folds in point #138
+  k(465)=(  4  6  4 ) --- weight=  0 |folds in point # 27
+  k(466)=(  5  6  4 ) --- weight=  0 |folds in point #127
+  k(467)=(  6  6  4 ) --- weight=  0 |folds in point # 27
+  k(468)=(  7  6  4 ) --- weight=  0 |folds in point #138
+  k(469)=(  8  6  4 ) --- weight=  0 |folds in point #247
+  k(470)=(  9  6  4 ) --- weight=  0 |folds in point #147
+  k(471)=(  0  7  4 ) --- weight=  0 |folds in point # 37
+  k(472)=(  1  7  4 ) --- weight=  0 |folds in point #148
+  k(473)=(  2  7  4 ) --- weight=  0 |folds in point #248
+  k(474)=(  3  7  4 ) --- weight=  0 |folds in point #148
+  k(475)=(  4  7  4 ) --- weight=  0 |folds in point # 37
+  k(476)=(  5  7  4 ) --- weight=  0 |folds in point #137
+  k(477)=(  6  7  4 ) --- weight=  0 |folds in point #138
+  k(478)=(  7  7  4 ) --- weight=  0 |folds in point # 38
+  k(479)=(  8  7  4 ) --- weight=  0 |folds in point #138
+  k(480)=(  9  7  4 ) --- weight=  0 |folds in point #137
+  k(481)=(  0  8  4 ) --- weight=  0 |folds in point # 27
+  k(482)=(  1  8  4 ) --- weight=  0 |folds in point #138
+  k(483)=(  2  8  4 ) --- weight=  0 |folds in point #247
+  k(484)=(  3  8  4 ) --- weight=  0 |folds in point #147
+  k(485)=(  4  8  4 ) --- weight=  0 |folds in point # 47
+  k(486)=(  5  8  4 ) --- weight=  0 |folds in point #147
+  k(487)=(  6  8  4 ) --- weight=  0 |folds in point #247
+  k(488)=(  7  8  4 ) --- weight=  0 |folds in point #138
+  k(489)=(  8  8  4 ) --- weight=  0 |folds in point # 27
+  k(490)=(  9  8  4 ) --- weight=  0 |folds in point #127
+  k(491)=(  0  9  4 ) --- weight=  0 |folds in point # 17
+  k(492)=(  1  9  4 ) --- weight=  0 |folds in point #126
+  k(493)=(  2  9  4 ) --- weight=  0 |folds in point #136
+  k(494)=(  3  9  4 ) --- weight=  0 |folds in point #146
+  k(495)=(  4  9  4 ) --- weight=  0 |folds in point # 46
+  k(496)=(  5  9  4 ) --- weight=  0 |folds in point #157
+  k(497)=(  6  9  4 ) --- weight=  0 |folds in point #147
+  k(498)=(  7  9  4 ) --- weight=  0 |folds in point #137
+  k(499)=(  8  9  4 ) --- weight=  0 |folds in point #127
+  k(500)=(  9  9  4 ) --- weight=  0 |folds in point # 16
+  k(501)=(  0  0  5 ) --- weight=  0 |folds in point #  6
+  k(502)=(  1  0  5 ) --- weight=  0 |folds in point # 16
+  k(503)=(  2  0  5 ) --- weight=  0 |folds in point # 26
+  k(504)=(  3  0  5 ) --- weight=  0 |folds in point # 36
+  k(505)=(  4  0  5 ) --- weight=  0 |folds in point # 46
+  k(506)=(  5  0  5 ) --- weight=  0 |folds in point # 56
+  k(507)=(  6  0  5 ) --- weight=  0 |folds in point # 46
+  k(508)=(  7  0  5 ) --- weight=  0 |folds in point # 36
+  k(509)=(  8  0  5 ) --- weight=  0 |folds in point # 26
+  k(510)=(  9  0  5 ) --- weight=  0 |folds in point # 16
+  k(511)=(  0  1  5 ) --- weight=  0 |folds in point # 16
+  k(512)=(  1  1  5 ) --- weight=  0 |folds in point # 17
+  k(513)=(  2  1  5 ) --- weight=  0 |folds in point #126
+  k(514)=(  3  1  5 ) --- weight=  0 |folds in point #136
+  k(515)=(  4  1  5 ) --- weight=  0 |folds in point #146
+  k(516)=(  5  1  5 ) --- weight=  0 |folds in point # 46
+  k(517)=(  6  1  5 ) --- weight=  0 |folds in point #157
+  k(518)=(  7  1  5 ) --- weight=  0 |folds in point #147
+  k(519)=(  8  1  5 ) --- weight=  0 |folds in point #137
+  k(520)=(  9  1  5 ) --- weight=  0 |folds in point #127
+  k(521)=(  0  2  5 ) --- weight=  0 |folds in point # 26
+  k(522)=(  1  2  5 ) --- weight=  0 |folds in point #126
+  k(523)=(  2  2  5 ) --- weight=  0 |folds in point # 28
+  k(524)=(  3  2  5 ) --- weight=  0 |folds in point #139
+  k(525)=(  4  2  5 ) --- weight=  0 |folds in point #136
+  k(526)=(  5  2  5 ) --- weight=  0 |folds in point # 36
+  k(527)=(  6  2  5 ) --- weight=  0 |folds in point #147
+  k(528)=(  7  2  5 ) --- weight=  0 |folds in point #258
+  k(529)=(  8  2  5 ) --- weight=  0 |folds in point #248
+  k(530)=(  9  2  5 ) --- weight=  0 |folds in point #137
+  k(531)=(  0  3  5 ) --- weight=  0 |folds in point # 36
+  k(532)=(  1  3  5 ) --- weight=  0 |folds in point #136
+  k(533)=(  2  3  5 ) --- weight=  0 |folds in point #139
+  k(534)=(  3  3  5 ) --- weight=  0 |folds in point # 28
+  k(535)=(  4  3  5 ) --- weight=  0 |folds in point #126
+  k(536)=(  5  3  5 ) --- weight=  0 |folds in point # 26
+  k(537)=(  6  3  5 ) --- weight=  0 |folds in point #137
+  k(538)=(  7  3  5 ) --- weight=  0 |folds in point #248
+  k(539)=(  8  3  5 ) --- weight=  0 |folds in point #258
+  k(540)=(  9  3  5 ) --- weight=  0 |folds in point #147
+  k(541)=(  0  4  5 ) --- weight=  0 |folds in point # 46
+  k(542)=(  1  4  5 ) --- weight=  0 |folds in point #146
+  k(543)=(  2  4  5 ) --- weight=  0 |folds in point #136
+  k(544)=(  3  4  5 ) --- weight=  0 |folds in point #126
+  k(545)=(  4  4  5 ) --- weight=  0 |folds in point # 17
+  k(546)=(  5  4  5 ) --- weight=  0 |folds in point # 16
+  k(547)=(  6  4  5 ) --- weight=  0 |folds in point #127
+  k(548)=(  7  4  5 ) --- weight=  0 |folds in point #137
+  k(549)=(  8  4  5 ) --- weight=  0 |folds in point #147
+  k(550)=(  9  4  5 ) --- weight=  0 |folds in point #157
+  k(551)=(  0  5  5 ) --- weight=  0 |folds in point # 56
+  k(552)=(  1  5  5 ) --- weight=  0 |folds in point # 46
+  k(553)=(  2  5  5 ) --- weight=  0 |folds in point # 36
+  k(554)=(  3  5  5 ) --- weight=  0 |folds in point # 26
+  k(555)=(  4  5  5 ) --- weight=  0 |folds in point # 16
+  k(556)=(  5  5  5 ) --- weight=  0 |folds in point #  6
+  k(557)=(  6  5  5 ) --- weight=  0 |folds in point # 16
+  k(558)=(  7  5  5 ) --- weight=  0 |folds in point # 26
+  k(559)=(  8  5  5 ) --- weight=  0 |folds in point # 36
+  k(560)=(  9  5  5 ) --- weight=  0 |folds in point # 46
+  k(561)=(  0  6  5 ) --- weight=  0 |folds in point # 46
+  k(562)=(  1  6  5 ) --- weight=  0 |folds in point #157
+  k(563)=(  2  6  5 ) --- weight=  0 |folds in point #147
+  k(564)=(  3  6  5 ) --- weight=  0 |folds in point #137
+  k(565)=(  4  6  5 ) --- weight=  0 |folds in point #127
+  k(566)=(  5  6  5 ) --- weight=  0 |folds in point # 16
+  k(567)=(  6  6  5 ) --- weight=  0 |folds in point # 17
+  k(568)=(  7  6  5 ) --- weight=  0 |folds in point #126
+  k(569)=(  8  6  5 ) --- weight=  0 |folds in point #136
+  k(570)=(  9  6  5 ) --- weight=  0 |folds in point #146
+  k(571)=(  0  7  5 ) --- weight=  0 |folds in point # 36
+  k(572)=(  1  7  5 ) --- weight=  0 |folds in point #147
+  k(573)=(  2  7  5 ) --- weight=  0 |folds in point #258
+  k(574)=(  3  7  5 ) --- weight=  0 |folds in point #248
+  k(575)=(  4  7  5 ) --- weight=  0 |folds in point #137
+  k(576)=(  5  7  5 ) --- weight=  0 |folds in point # 26
+  k(577)=(  6  7  5 ) --- weight=  0 |folds in point #126
+  k(578)=(  7  7  5 ) --- weight=  0 |folds in point # 28
+  k(579)=(  8  7  5 ) --- weight=  0 |folds in point #139
+  k(580)=(  9  7  5 ) --- weight=  0 |folds in point #136
+  k(581)=(  0  8  5 ) --- weight=  0 |folds in point # 26
+  k(582)=(  1  8  5 ) --- weight=  0 |folds in point #137
+  k(583)=(  2  8  5 ) --- weight=  0 |folds in point #248
+  k(584)=(  3  8  5 ) --- weight=  0 |folds in point #258
+  k(585)=(  4  8  5 ) --- weight=  0 |folds in point #147
+  k(586)=(  5  8  5 ) --- weight=  0 |folds in point # 36
+  k(587)=(  6  8  5 ) --- weight=  0 |folds in point #136
+  k(588)=(  7  8  5 ) --- weight=  0 |folds in point #139
+  k(589)=(  8  8  5 ) --- weight=  0 |folds in point # 28
+  k(590)=(  9  8  5 ) --- weight=  0 |folds in point #126
+  k(591)=(  0  9  5 ) --- weight=  0 |folds in point # 16
+  k(592)=(  1  9  5 ) --- weight=  0 |folds in point #127
+  k(593)=(  2  9  5 ) --- weight=  0 |folds in point #137
+  k(594)=(  3  9  5 ) --- weight=  0 |folds in point #147
+  k(595)=(  4  9  5 ) --- weight=  0 |folds in point #157
+  k(596)=(  5  9  5 ) --- weight=  0 |folds in point # 46
+  k(597)=(  6  9  5 ) --- weight=  0 |folds in point #146
+  k(598)=(  7  9  5 ) --- weight=  0 |folds in point #136
+  k(599)=(  8  9  5 ) --- weight=  0 |folds in point #126
+  k(600)=(  9  9  5 ) --- weight=  0 |folds in point # 17
+  k(601)=(  0  0  6 ) --- weight=  0 |folds in point #  5
+  k(602)=(  1  0  6 ) --- weight=  0 |folds in point # 17
+  k(603)=(  2  0  6 ) --- weight=  0 |folds in point # 27
+  k(604)=(  3  0  6 ) --- weight=  0 |folds in point # 37
+  k(605)=(  4  0  6 ) --- weight=  0 |folds in point # 47
+  k(606)=(  5  0  6 ) --- weight=  0 |folds in point # 46
+  k(607)=(  6  0  6 ) --- weight=  0 |folds in point # 45
+  k(608)=(  7  0  6 ) --- weight=  0 |folds in point # 35
+  k(609)=(  8  0  6 ) --- weight=  0 |folds in point # 25
+  k(610)=(  9  0  6 ) --- weight=  0 |folds in point # 15
+  k(611)=(  0  1  6 ) --- weight=  0 |folds in point # 17
+  k(612)=(  1  1  6 ) --- weight=  0 |folds in point # 16
+  k(613)=(  2  1  6 ) --- weight=  0 |folds in point #127
+  k(614)=(  3  1  6 ) --- weight=  0 |folds in point #137
+  k(615)=(  4  1  6 ) --- weight=  0 |folds in point #147
+  k(616)=(  5  1  6 ) --- weight=  0 |folds in point #157
+  k(617)=(  6  1  6 ) --- weight=  0 |folds in point # 46
+  k(618)=(  7  1  6 ) --- weight=  0 |folds in point #146
+  k(619)=(  8  1  6 ) --- weight=  0 |folds in point #136
+  k(620)=(  9  1  6 ) --- weight=  0 |folds in point #126
+  k(621)=(  0  2  6 ) --- weight=  0 |folds in point # 27
+  k(622)=(  1  2  6 ) --- weight=  0 |folds in point #127
+  k(623)=(  2  2  6 ) --- weight=  0 |folds in point # 27
+  k(624)=(  3  2  6 ) --- weight=  0 |folds in point #138
+  k(625)=(  4  2  6 ) --- weight=  0 |folds in point #247
+  k(626)=(  5  2  6 ) --- weight=  0 |folds in point #147
+  k(627)=(  6  2  6 ) --- weight=  0 |folds in point # 47
+  k(628)=(  7  2  6 ) --- weight=  0 |folds in point #147
+  k(629)=(  8  2  6 ) --- weight=  0 |folds in point #247
+  k(630)=(  9  2  6 ) --- weight=  0 |folds in point #138
+  k(631)=(  0  3  6 ) --- weight=  0 |folds in point # 37
+  k(632)=(  1  3  6 ) --- weight=  0 |folds in point #137
+  k(633)=(  2  3  6 ) --- weight=  0 |folds in point #138
+  k(634)=(  3  3  6 ) --- weight=  0 |folds in point # 38
+  k(635)=(  4  3  6 ) --- weight=  0 |folds in point #138
+  k(636)=(  5  3  6 ) --- weight=  0 |folds in point #137
+  k(637)=(  6  3  6 ) --- weight=  0 |folds in point # 37
+  k(638)=(  7  3  6 ) --- weight=  0 |folds in point #148
+  k(639)=(  8  3  6 ) --- weight=  0 |folds in point #248
+  k(640)=(  9  3  6 ) --- weight=  0 |folds in point #148
+  k(641)=(  0  4  6 ) --- weight=  0 |folds in point # 47
+  k(642)=(  1  4  6 ) --- weight=  0 |folds in point #147
+  k(643)=(  2  4  6 ) --- weight=  0 |folds in point #247
+  k(644)=(  3  4  6 ) --- weight=  0 |folds in point #138
+  k(645)=(  4  4  6 ) --- weight=  0 |folds in point # 27
+  k(646)=(  5  4  6 ) --- weight=  0 |folds in point #127
+  k(647)=(  6  4  6 ) --- weight=  0 |folds in point # 27
+  k(648)=(  7  4  6 ) --- weight=  0 |folds in point #138
+  k(649)=(  8  4  6 ) --- weight=  0 |folds in point #247
+  k(650)=(  9  4  6 ) --- weight=  0 |folds in point #147
+  k(651)=(  0  5  6 ) --- weight=  0 |folds in point # 46
+  k(652)=(  1  5  6 ) --- weight=  0 |folds in point #157
+  k(653)=(  2  5  6 ) --- weight=  0 |folds in point #147
+  k(654)=(  3  5  6 ) --- weight=  0 |folds in point #137
+  k(655)=(  4  5  6 ) --- weight=  0 |folds in point #127
+  k(656)=(  5  5  6 ) --- weight=  0 |folds in point # 16
+  k(657)=(  6  5  6 ) --- weight=  0 |folds in point # 17
+  k(658)=(  7  5  6 ) --- weight=  0 |folds in point #126
+  k(659)=(  8  5  6 ) --- weight=  0 |folds in point #136
+  k(660)=(  9  5  6 ) --- weight=  0 |folds in point #146
+  k(661)=(  0  6  6 ) --- weight=  0 |folds in point # 45
+  k(662)=(  1  6  6 ) --- weight=  0 |folds in point # 46
+  k(663)=(  2  6  6 ) --- weight=  0 |folds in point # 47
+  k(664)=(  3  6  6 ) --- weight=  0 |folds in point # 37
+  k(665)=(  4  6  6 ) --- weight=  0 |folds in point # 27
+  k(666)=(  5  6  6 ) --- weight=  0 |folds in point # 17
+  k(667)=(  6  6  6 ) --- weight=  0 |folds in point #  5
+  k(668)=(  7  6  6 ) --- weight=  0 |folds in point # 15
+  k(669)=(  8  6  6 ) --- weight=  0 |folds in point # 25
+  k(670)=(  9  6  6 ) --- weight=  0 |folds in point # 35
+  k(671)=(  0  7  6 ) --- weight=  0 |folds in point # 35
+  k(672)=(  1  7  6 ) --- weight=  0 |folds in point #146
+  k(673)=(  2  7  6 ) --- weight=  0 |folds in point #147
+  k(674)=(  3  7  6 ) --- weight=  0 |folds in point #148
+  k(675)=(  4  7  6 ) --- weight=  0 |folds in point #138
+  k(676)=(  5  7  6 ) --- weight=  0 |folds in point #126
+  k(677)=(  6  7  6 ) --- weight=  0 |folds in point # 15
+  k(678)=(  7  7  6 ) --- weight=  0 |folds in point # 18
+  k(679)=(  8  7  6 ) --- weight=  0 |folds in point #125
+  k(680)=(  9  7  6 ) --- weight=  0 |folds in point #135
+  k(681)=(  0  8  6 ) --- weight=  0 |folds in point # 25
+  k(682)=(  1  8  6 ) --- weight=  0 |folds in point #136
+  k(683)=(  2  8  6 ) --- weight=  0 |folds in point #247
+  k(684)=(  3  8  6 ) --- weight=  0 |folds in point #248
+  k(685)=(  4  8  6 ) --- weight=  0 |folds in point #247
+  k(686)=(  5  8  6 ) --- weight=  0 |folds in point #136
+  k(687)=(  6  8  6 ) --- weight=  0 |folds in point # 25
+  k(688)=(  7  8  6 ) --- weight=  0 |folds in point #125
+  k(689)=(  8  8  6 ) --- weight=  0 |folds in point # 29
+  k(690)=(  9  8  6 ) --- weight=  0 |folds in point #125
+  k(691)=(  0  9  6 ) --- weight=  0 |folds in point # 15
+  k(692)=(  1  9  6 ) --- weight=  0 |folds in point #126
+  k(693)=(  2  9  6 ) --- weight=  0 |folds in point #138
+  k(694)=(  3  9  6 ) --- weight=  0 |folds in point #148
+  k(695)=(  4  9  6 ) --- weight=  0 |folds in point #147
+  k(696)=(  5  9  6 ) --- weight=  0 |folds in point #146
+  k(697)=(  6  9  6 ) --- weight=  0 |folds in point # 35
+  k(698)=(  7  9  6 ) --- weight=  0 |folds in point #135
+  k(699)=(  8  9  6 ) --- weight=  0 |folds in point #125
+  k(700)=(  9  9  6 ) --- weight=  0 |folds in point # 18
+  k(701)=(  0  0  7 ) --- weight=  0 |folds in point #  4
+  k(702)=(  1  0  7 ) --- weight=  0 |folds in point # 18
+  k(703)=(  2  0  7 ) --- weight=  0 |folds in point # 28
+  k(704)=(  3  0  7 ) --- weight=  0 |folds in point # 38
+  k(705)=(  4  0  7 ) --- weight=  0 |folds in point # 37
+  k(706)=(  5  0  7 ) --- weight=  0 |folds in point # 36
+  k(707)=(  6  0  7 ) --- weight=  0 |folds in point # 35
+  k(708)=(  7  0  7 ) --- weight=  0 |folds in point # 34
+  k(709)=(  8  0  7 ) --- weight=  0 |folds in point # 24
+  k(710)=(  9  0  7 ) --- weight=  0 |folds in point # 14
+  k(711)=(  0  1  7 ) --- weight=  0 |folds in point # 18
+  k(712)=(  1  1  7 ) --- weight=  0 |folds in point # 15
+  k(713)=(  2  1  7 ) --- weight=  0 |folds in point #126
+  k(714)=(  3  1  7 ) --- weight=  0 |folds in point #138
+  k(715)=(  4  1  7 ) --- weight=  0 |folds in point #148
+  k(716)=(  5  1  7 ) --- weight=  0 |folds in point #147
+  k(717)=(  6  1  7 ) --- weight=  0 |folds in point #146
+  k(718)=(  7  1  7 ) --- weight=  0 |folds in point # 35
+  k(719)=(  8  1  7 ) --- weight=  0 |folds in point #135
+  k(720)=(  9  1  7 ) --- weight=  0 |folds in point #125
+  k(721)=(  0  2  7 ) --- weight=  0 |folds in point # 28
+  k(722)=(  1  2  7 ) --- weight=  0 |folds in point #126
+  k(723)=(  2  2  7 ) --- weight=  0 |folds in point # 26
+  k(724)=(  3  2  7 ) --- weight=  0 |folds in point #137
+  k(725)=(  4  2  7 ) --- weight=  0 |folds in point #248
+  k(726)=(  5  2  7 ) --- weight=  0 |folds in point #258
+  k(727)=(  6  2  7 ) --- weight=  0 |folds in point #147
+  k(728)=(  7  2  7 ) --- weight=  0 |folds in point # 36
+  k(729)=(  8  2  7 ) --- weight=  0 |folds in point #136
+  k(730)=(  9  2  7 ) --- weight=  0 |folds in point #139
+  k(731)=(  0  3  7 ) --- weight=  0 |folds in point # 38
+  k(732)=(  1  3  7 ) --- weight=  0 |folds in point #138
+  k(733)=(  2  3  7 ) --- weight=  0 |folds in point #137
+  k(734)=(  3  3  7 ) --- weight=  0 |folds in point # 37
+  k(735)=(  4  3  7 ) --- weight=  0 |folds in point #148
+  k(736)=(  5  3  7 ) --- weight=  0 |folds in point #248
+  k(737)=(  6  3  7 ) --- weight=  0 |folds in point #148
+  k(738)=(  7  3  7 ) --- weight=  0 |folds in point # 37
+  k(739)=(  8  3  7 ) --- weight=  0 |folds in point #137
+  k(740)=(  9  3  7 ) --- weight=  0 |folds in point #138
+  k(741)=(  0  4  7 ) --- weight=  0 |folds in point # 37
+  k(742)=(  1  4  7 ) --- weight=  0 |folds in point #148
+  k(743)=(  2  4  7 ) --- weight=  0 |folds in point #248
+  k(744)=(  3  4  7 ) --- weight=  0 |folds in point #148
+  k(745)=(  4  4  7 ) --- weight=  0 |folds in point # 37
+  k(746)=(  5  4  7 ) --- weight=  0 |folds in point #137
+  k(747)=(  6  4  7 ) --- weight=  0 |folds in point #138
+  k(748)=(  7  4  7 ) --- weight=  0 |folds in point # 38
+  k(749)=(  8  4  7 ) --- weight=  0 |folds in point #138
+  k(750)=(  9  4  7 ) --- weight=  0 |folds in point #137
+  k(751)=(  0  5  7 ) --- weight=  0 |folds in point # 36
+  k(752)=(  1  5  7 ) --- weight=  0 |folds in point #147
+  k(753)=(  2  5  7 ) --- weight=  0 |folds in point #258
+  k(754)=(  3  5  7 ) --- weight=  0 |folds in point #248
+  k(755)=(  4  5  7 ) --- weight=  0 |folds in point #137
+  k(756)=(  5  5  7 ) --- weight=  0 |folds in point # 26
+  k(757)=(  6  5  7 ) --- weight=  0 |folds in point #126
+  k(758)=(  7  5  7 ) --- weight=  0 |folds in point # 28
+  k(759)=(  8  5  7 ) --- weight=  0 |folds in point #139
+  k(760)=(  9  5  7 ) --- weight=  0 |folds in point #136
+  k(761)=(  0  6  7 ) --- weight=  0 |folds in point # 35
+  k(762)=(  1  6  7 ) --- weight=  0 |folds in point #146
+  k(763)=(  2  6  7 ) --- weight=  0 |folds in point #147
+  k(764)=(  3  6  7 ) --- weight=  0 |folds in point #148
+  k(765)=(  4  6  7 ) --- weight=  0 |folds in point #138
+  k(766)=(  5  6  7 ) --- weight=  0 |folds in point #126
+  k(767)=(  6  6  7 ) --- weight=  0 |folds in point # 15
+  k(768)=(  7  6  7 ) --- weight=  0 |folds in point # 18
+  k(769)=(  8  6  7 ) --- weight=  0 |folds in point #125
+  k(770)=(  9  6  7 ) --- weight=  0 |folds in point #135
+  k(771)=(  0  7  7 ) --- weight=  0 |folds in point # 34
+  k(772)=(  1  7  7 ) --- weight=  0 |folds in point # 35
+  k(773)=(  2  7  7 ) --- weight=  0 |folds in point # 36
+  k(774)=(  3  7  7 ) --- weight=  0 |folds in point # 37
+  k(775)=(  4  7  7 ) --- weight=  0 |folds in point # 38
+  k(776)=(  5  7  7 ) --- weight=  0 |folds in point # 28
+  k(777)=(  6  7  7 ) --- weight=  0 |folds in point # 18
+  k(778)=(  7  7  7 ) --- weight=  0 |folds in point #  4
+  k(779)=(  8  7  7 ) --- weight=  0 |folds in point # 14
+  k(780)=(  9  7  7 ) --- weight=  0 |folds in point # 24
+  k(781)=(  0  8  7 ) --- weight=  0 |folds in point # 24
+  k(782)=(  1  8  7 ) --- weight=  0 |folds in point #135
+  k(783)=(  2  8  7 ) --- weight=  0 |folds in point #136
+  k(784)=(  3  8  7 ) --- weight=  0 |folds in point #137
+  k(785)=(  4  8  7 ) --- weight=  0 |folds in point #138
+  k(786)=(  5  8  7 ) --- weight=  0 |folds in point #139
+  k(787)=(  6  8  7 ) --- weight=  0 |folds in point #125
+  k(788)=(  7  8  7 ) --- weight=  0 |folds in point # 14
+  k(789)=(  8  8  7 ) --- weight=  0 |folds in point # 19
+  k(790)=(  9  8  7 ) --- weight=  0 |folds in point #124
+  k(791)=(  0  9  7 ) --- weight=  0 |folds in point # 14
+  k(792)=(  1  9  7 ) --- weight=  0 |folds in point #125
+  k(793)=(  2  9  7 ) --- weight=  0 |folds in point #139
+  k(794)=(  3  9  7 ) --- weight=  0 |folds in point #138
+  k(795)=(  4  9  7 ) --- weight=  0 |folds in point #137
+  k(796)=(  5  9  7 ) --- weight=  0 |folds in point #136
+  k(797)=(  6  9  7 ) --- weight=  0 |folds in point #135
+  k(798)=(  7  9  7 ) --- weight=  0 |folds in point # 24
+  k(799)=(  8  9  7 ) --- weight=  0 |folds in point #124
+  k(800)=(  9  9  7 ) --- weight=  0 |folds in point # 19
+  k(801)=(  0  0  8 ) --- weight=  0 |folds in point #  3
+  k(802)=(  1  0  8 ) --- weight=  0 |folds in point # 19
+  k(803)=(  2  0  8 ) --- weight=  0 |folds in point # 29
+  k(804)=(  3  0  8 ) --- weight=  0 |folds in point # 28
+  k(805)=(  4  0  8 ) --- weight=  0 |folds in point # 27
+  k(806)=(  5  0  8 ) --- weight=  0 |folds in point # 26
+  k(807)=(  6  0  8 ) --- weight=  0 |folds in point # 25
+  k(808)=(  7  0  8 ) --- weight=  0 |folds in point # 24
+  k(809)=(  8  0  8 ) --- weight=  0 |folds in point # 23
+  k(810)=(  9  0  8 ) --- weight=  0 |folds in point # 13
+  k(811)=(  0  1  8 ) --- weight=  0 |folds in point # 19
+  k(812)=(  1  1  8 ) --- weight=  0 |folds in point # 14
+  k(813)=(  2  1  8 ) --- weight=  0 |folds in point #125
+  k(814)=(  3  1  8 ) --- weight=  0 |folds in point #139
+  k(815)=(  4  1  8 ) --- weight=  0 |folds in point #138
+  k(816)=(  5  1  8 ) --- weight=  0 |folds in point #137
+  k(817)=(  6  1  8 ) --- weight=  0 |folds in point #136
+  k(818)=(  7  1  8 ) --- weight=  0 |folds in point #135
+  k(819)=(  8  1  8 ) --- weight=  0 |folds in point # 24
+  k(820)=(  9  1  8 ) --- weight=  0 |folds in point #124
+  k(821)=(  0  2  8 ) --- weight=  0 |folds in point # 29
+  k(822)=(  1  2  8 ) --- weight=  0 |folds in point #125
+  k(823)=(  2  2  8 ) --- weight=  0 |folds in point # 25
+  k(824)=(  3  2  8 ) --- weight=  0 |folds in point #136
+  k(825)=(  4  2  8 ) --- weight=  0 |folds in point #247
+  k(826)=(  5  2  8 ) --- weight=  0 |folds in point #248
+  k(827)=(  6  2  8 ) --- weight=  0 |folds in point #247
+  k(828)=(  7  2  8 ) --- weight=  0 |folds in point #136
+  k(829)=(  8  2  8 ) --- weight=  0 |folds in point # 25
+  k(830)=(  9  2  8 ) --- weight=  0 |folds in point #125
+  k(831)=(  0  3  8 ) --- weight=  0 |folds in point # 28
+  k(832)=(  1  3  8 ) --- weight=  0 |folds in point #139
+  k(833)=(  2  3  8 ) --- weight=  0 |folds in point #136
+  k(834)=(  3  3  8 ) --- weight=  0 |folds in point # 36
+  k(835)=(  4  3  8 ) --- weight=  0 |folds in point #147
+  k(836)=(  5  3  8 ) --- weight=  0 |folds in point #258
+  k(837)=(  6  3  8 ) --- weight=  0 |folds in point #248
+  k(838)=(  7  3  8 ) --- weight=  0 |folds in point #137
+  k(839)=(  8  3  8 ) --- weight=  0 |folds in point # 26
+  k(840)=(  9  3  8 ) --- weight=  0 |folds in point #126
+  k(841)=(  0  4  8 ) --- weight=  0 |folds in point # 27
+  k(842)=(  1  4  8 ) --- weight=  0 |folds in point #138
+  k(843)=(  2  4  8 ) --- weight=  0 |folds in point #247
+  k(844)=(  3  4  8 ) --- weight=  0 |folds in point #147
+  k(845)=(  4  4  8 ) --- weight=  0 |folds in point # 47
+  k(846)=(  5  4  8 ) --- weight=  0 |folds in point #147
+  k(847)=(  6  4  8 ) --- weight=  0 |folds in point #247
+  k(848)=(  7  4  8 ) --- weight=  0 |folds in point #138
+  k(849)=(  8  4  8 ) --- weight=  0 |folds in point # 27
+  k(850)=(  9  4  8 ) --- weight=  0 |folds in point #127
+  k(851)=(  0  5  8 ) --- weight=  0 |folds in point # 26
+  k(852)=(  1  5  8 ) --- weight=  0 |folds in point #137
+  k(853)=(  2  5  8 ) --- weight=  0 |folds in point #248
+  k(854)=(  3  5  8 ) --- weight=  0 |folds in point #258
+  k(855)=(  4  5  8 ) --- weight=  0 |folds in point #147
+  k(856)=(  5  5  8 ) --- weight=  0 |folds in point # 36
+  k(857)=(  6  5  8 ) --- weight=  0 |folds in point #136
+  k(858)=(  7  5  8 ) --- weight=  0 |folds in point #139
+  k(859)=(  8  5  8 ) --- weight=  0 |folds in point # 28
+  k(860)=(  9  5  8 ) --- weight=  0 |folds in point #126
+  k(861)=(  0  6  8 ) --- weight=  0 |folds in point # 25
+  k(862)=(  1  6  8 ) --- weight=  0 |folds in point #136
+  k(863)=(  2  6  8 ) --- weight=  0 |folds in point #247
+  k(864)=(  3  6  8 ) --- weight=  0 |folds in point #248
+  k(865)=(  4  6  8 ) --- weight=  0 |folds in point #247
+  k(866)=(  5  6  8 ) --- weight=  0 |folds in point #136
+  k(867)=(  6  6  8 ) --- weight=  0 |folds in point # 25
+  k(868)=(  7  6  8 ) --- weight=  0 |folds in point #125
+  k(869)=(  8  6  8 ) --- weight=  0 |folds in point # 29
+  k(870)=(  9  6  8 ) --- weight=  0 |folds in point #125
+  k(871)=(  0  7  8 ) --- weight=  0 |folds in point # 24
+  k(872)=(  1  7  8 ) --- weight=  0 |folds in point #135
+  k(873)=(  2  7  8 ) --- weight=  0 |folds in point #136
+  k(874)=(  3  7  8 ) --- weight=  0 |folds in point #137
+  k(875)=(  4  7  8 ) --- weight=  0 |folds in point #138
+  k(876)=(  5  7  8 ) --- weight=  0 |folds in point #139
+  k(877)=(  6  7  8 ) --- weight=  0 |folds in point #125
+  k(878)=(  7  7  8 ) --- weight=  0 |folds in point # 14
+  k(879)=(  8  7  8 ) --- weight=  0 |folds in point # 19
+  k(880)=(  9  7  8 ) --- weight=  0 |folds in point #124
+  k(881)=(  0  8  8 ) --- weight=  0 |folds in point # 23
+  k(882)=(  1  8  8 ) --- weight=  0 |folds in point # 24
+  k(883)=(  2  8  8 ) --- weight=  0 |folds in point # 25
+  k(884)=(  3  8  8 ) --- weight=  0 |folds in point # 26
+  k(885)=(  4  8  8 ) --- weight=  0 |folds in point # 27
+  k(886)=(  5  8  8 ) --- weight=  0 |folds in point # 28
+  k(887)=(  6  8  8 ) --- weight=  0 |folds in point # 29
+  k(888)=(  7  8  8 ) --- weight=  0 |folds in point # 19
+  k(889)=(  8  8  8 ) --- weight=  0 |folds in point #  3
+  k(890)=(  9  8  8 ) --- weight=  0 |folds in point # 13
+  k(891)=(  0  9  8 ) --- weight=  0 |folds in point # 13
+  k(892)=(  1  9  8 ) --- weight=  0 |folds in point #124
+  k(893)=(  2  9  8 ) --- weight=  0 |folds in point #125
+  k(894)=(  3  9  8 ) --- weight=  0 |folds in point #126
+  k(895)=(  4  9  8 ) --- weight=  0 |folds in point #127
+  k(896)=(  5  9  8 ) --- weight=  0 |folds in point #126
+  k(897)=(  6  9  8 ) --- weight=  0 |folds in point #125
+  k(898)=(  7  9  8 ) --- weight=  0 |folds in point #124
+  k(899)=(  8  9  8 ) --- weight=  0 |folds in point # 13
+  k(900)=(  9  9  8 ) --- weight=  0 |folds in point # 20
+  k(901)=(  0  0  9 ) --- weight=  0 |folds in point #  2
+  k(902)=(  1  0  9 ) --- weight=  0 |folds in point # 20
+  k(903)=(  2  0  9 ) --- weight=  0 |folds in point # 19
+  k(904)=(  3  0  9 ) --- weight=  0 |folds in point # 18
+  k(905)=(  4  0  9 ) --- weight=  0 |folds in point # 17
+  k(906)=(  5  0  9 ) --- weight=  0 |folds in point # 16
+  k(907)=(  6  0  9 ) --- weight=  0 |folds in point # 15
+  k(908)=(  7  0  9 ) --- weight=  0 |folds in point # 14
+  k(909)=(  8  0  9 ) --- weight=  0 |folds in point # 13
+  k(910)=(  9  0  9 ) --- weight=  0 |folds in point # 12
+  k(911)=(  0  1  9 ) --- weight=  0 |folds in point # 20
+  k(912)=(  1  1  9 ) --- weight=  0 |folds in point # 13
+  k(913)=(  2  1  9 ) --- weight=  0 |folds in point #124
+  k(914)=(  3  1  9 ) --- weight=  0 |folds in point #125
+  k(915)=(  4  1  9 ) --- weight=  0 |folds in point #126
+  k(916)=(  5  1  9 ) --- weight=  0 |folds in point #127
+  k(917)=(  6  1  9 ) --- weight=  0 |folds in point #126
+  k(918)=(  7  1  9 ) --- weight=  0 |folds in point #125
+  k(919)=(  8  1  9 ) --- weight=  0 |folds in point #124
+  k(920)=(  9  1  9 ) --- weight=  0 |folds in point # 13
+  k(921)=(  0  2  9 ) --- weight=  0 |folds in point # 19
+  k(922)=(  1  2  9 ) --- weight=  0 |folds in point #124
+  k(923)=(  2  2  9 ) --- weight=  0 |folds in point # 24
+  k(924)=(  3  2  9 ) --- weight=  0 |folds in point #135
+  k(925)=(  4  2  9 ) --- weight=  0 |folds in point #136
+  k(926)=(  5  2  9 ) --- weight=  0 |folds in point #137
+  k(927)=(  6  2  9 ) --- weight=  0 |folds in point #138
+  k(928)=(  7  2  9 ) --- weight=  0 |folds in point #139
+  k(929)=(  8  2  9 ) --- weight=  0 |folds in point #125
+  k(930)=(  9  2  9 ) --- weight=  0 |folds in point # 14
+  k(931)=(  0  3  9 ) --- weight=  0 |folds in point # 18
+  k(932)=(  1  3  9 ) --- weight=  0 |folds in point #125
+  k(933)=(  2  3  9 ) --- weight=  0 |folds in point #135
+  k(934)=(  3  3  9 ) --- weight=  0 |folds in point # 35
+  k(935)=(  4  3  9 ) --- weight=  0 |folds in point #146
+  k(936)=(  5  3  9 ) --- weight=  0 |folds in point #147
+  k(937)=(  6  3  9 ) --- weight=  0 |folds in point #148
+  k(938)=(  7  3  9 ) --- weight=  0 |folds in point #138
+  k(939)=(  8  3  9 ) --- weight=  0 |folds in point #126
+  k(940)=(  9  3  9 ) --- weight=  0 |folds in point # 15
+  k(941)=(  0  4  9 ) --- weight=  0 |folds in point # 17
+  k(942)=(  1  4  9 ) --- weight=  0 |folds in point #126
+  k(943)=(  2  4  9 ) --- weight=  0 |folds in point #136
+  k(944)=(  3  4  9 ) --- weight=  0 |folds in point #146
+  k(945)=(  4  4  9 ) --- weight=  0 |folds in point # 46
+  k(946)=(  5  4  9 ) --- weight=  0 |folds in point #157
+  k(947)=(  6  4  9 ) --- weight=  0 |folds in point #147
+  k(948)=(  7  4  9 ) --- weight=  0 |folds in point #137
+  k(949)=(  8  4  9 ) --- weight=  0 |folds in point #127
+  k(950)=(  9  4  9 ) --- weight=  0 |folds in point # 16
+  k(951)=(  0  5  9 ) --- weight=  0 |folds in point # 16
+  k(952)=(  1  5  9 ) --- weight=  0 |folds in point #127
+  k(953)=(  2  5  9 ) --- weight=  0 |folds in point #137
+  k(954)=(  3  5  9 ) --- weight=  0 |folds in point #147
+  k(955)=(  4  5  9 ) --- weight=  0 |folds in point #157
+  k(956)=(  5  5  9 ) --- weight=  0 |folds in point # 46
+  k(957)=(  6  5  9 ) --- weight=  0 |folds in point #146
+  k(958)=(  7  5  9 ) --- weight=  0 |folds in point #136
+  k(959)=(  8  5  9 ) --- weight=  0 |folds in point #126
+  k(960)=(  9  5  9 ) --- weight=  0 |folds in point # 17
+  k(961)=(  0  6  9 ) --- weight=  0 |folds in point # 15
+  k(962)=(  1  6  9 ) --- weight=  0 |folds in point #126
+  k(963)=(  2  6  9 ) --- weight=  0 |folds in point #138
+  k(964)=(  3  6  9 ) --- weight=  0 |folds in point #148
+  k(965)=(  4  6  9 ) --- weight=  0 |folds in point #147
+  k(966)=(  5  6  9 ) --- weight=  0 |folds in point #146
+  k(967)=(  6  6  9 ) --- weight=  0 |folds in point # 35
+  k(968)=(  7  6  9 ) --- weight=  0 |folds in point #135
+  k(969)=(  8  6  9 ) --- weight=  0 |folds in point #125
+  k(970)=(  9  6  9 ) --- weight=  0 |folds in point # 18
+  k(971)=(  0  7  9 ) --- weight=  0 |folds in point # 14
+  k(972)=(  1  7  9 ) --- weight=  0 |folds in point #125
+  k(973)=(  2  7  9 ) --- weight=  0 |folds in point #139
+  k(974)=(  3  7  9 ) --- weight=  0 |folds in point #138
+  k(975)=(  4  7  9 ) --- weight=  0 |folds in point #137
+  k(976)=(  5  7  9 ) --- weight=  0 |folds in point #136
+  k(977)=(  6  7  9 ) --- weight=  0 |folds in point #135
+  k(978)=(  7  7  9 ) --- weight=  0 |folds in point # 24
+  k(979)=(  8  7  9 ) --- weight=  0 |folds in point #124
+  k(980)=(  9  7  9 ) --- weight=  0 |folds in point # 19
+  k(981)=(  0  8  9 ) --- weight=  0 |folds in point # 13
+  k(982)=(  1  8  9 ) --- weight=  0 |folds in point #124
+  k(983)=(  2  8  9 ) --- weight=  0 |folds in point #125
+  k(984)=(  3  8  9 ) --- weight=  0 |folds in point #126
+  k(985)=(  4  8  9 ) --- weight=  0 |folds in point #127
+  k(986)=(  5  8  9 ) --- weight=  0 |folds in point #126
+  k(987)=(  6  8  9 ) --- weight=  0 |folds in point #125
+  k(988)=(  7  8  9 ) --- weight=  0 |folds in point #124
+  k(989)=(  8  8  9 ) --- weight=  0 |folds in point # 13
+  k(990)=(  9  8  9 ) --- weight=  0 |folds in point # 20
+  k(991)=(  0  9  9 ) --- weight=  0 |folds in point # 12
+  k(992)=(  1  9  9 ) --- weight=  0 |folds in point # 13
+  k(993)=(  2  9  9 ) --- weight=  0 |folds in point # 14
+  k(994)=(  3  9  9 ) --- weight=  0 |folds in point # 15
+  k(995)=(  4  9  9 ) --- weight=  0 |folds in point # 16
+  k(996)=(  5  9  9 ) --- weight=  0 |folds in point # 17
+  k(997)=(  6  9  9 ) --- weight=  0 |folds in point # 18
+  k(998)=(  7  9  9 ) --- weight=  0 |folds in point # 19
+  k(999)=(  8  9  9 ) --- weight=  0 |folds in point # 20
+  k(***)=(  9  9  9 ) --- weight=  0 |folds in point #  2

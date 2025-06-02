@@ -1,0 +1,14 @@
+&inputpp
+    prefix        = 'Ge_scf'          ! This name should be the same for all input files in this folder 
+    outdir        = './Ge_out/'       ! Directory for output/temporary files (MUST EXIST)
+    calculation   = 'eps'             ! Compute the real and imaginary part of the dielectric function
+/
+&energy_grid
+    smeartype     = 'gauss'           ! Gaussian smearing to smooth the spectrum 
+    intersmear    = 0.15d0            ! Gaussian broadening parameter (in eV)
+    intrasmear    = 0.0d0             ! Gaussian broadening parameter (in eV)
+    wmax          = 30.0d0            ! Maximimun frequency (in eV) 
+    wmin          = 0.0d0             ! Minimum frequency (in eV)
+    nw            = 600               ! Number of points to compute the dielectric function 
+    shift         = 0.0d0             ! Apply a constant shift (in frequency) to the compute spectrum
+/

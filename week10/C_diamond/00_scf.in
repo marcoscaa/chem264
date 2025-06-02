@@ -1,0 +1,41 @@
+! Input file for SCF calculation of bulk Crmanium (Diamond Structure)
+
+&CONTROL
+    calculation   = 'scf'             ! Type of calculation: Self-Consistent Field
+    restart_mode  = 'from_scratch'    ! Start a new calculation
+    prefix        = 'C_scf'           ! This name should be the same for all input files in this folder 
+    pseudo_dir    = './'              ! Directory containing pseudopotential files 
+    outdir        = './C_out/'        ! Directory for output/temporary files 
+    verbosity     = 'low'             ! Level of output detail ('low', 'medium', 'high')
+/
+
+&SYSTEM
+    ibrav         = 2                 ! Bravais lattice index: 2 for FCC
+    a             = 3.56              ! Lattice parameter 'a' in Angstrom units, from VC-RELAX
+    nat           = 2                 ! Number of atoms in the primitive unit cell
+    ntyp          = 1                 ! Number of types of atoms
+    ecutwfc       = 60.0              ! Kinetic energy cutoff for wavefunctions (in Ry)
+    occupations   = 'smearing'        ! Use smearing for occupations (good for convergence, essential for metals)
+    smearing      = 'gaussian'        ! Type of smearing
+    degauss       = 0.01              ! Smearing width (in Ry) - small value for semiconductors
+    nosym         = .true.
+    noinv         = .true.
+/
+
+&ELECTRONS
+    mixing_mode   = 'plain'           ! Charge density mixing scheme
+    mixing_beta   = 0.5               ! Mixing factor for density mixing
+    conv_thr      = 1.0e-6            ! Convergence threshold for SCF total energy (in Ry/cell)
+    diagonalization = 'david'         ! Algorithm for Hamiltonian diagonalization
+/
+
+ATOMIC_SPECIES
+  C      12.00   C.upf  ! PP file has to be in UPF format 
+
+ATOMIC_POSITIONS {alat}
+  C   0.00   0.00   0.00
+  C   0.25   0.25   0.25
+
+K_POINTS {automatic}
+  8 8 8   0 0 0  
+

@@ -1,0 +1,68 @@
+
+     Program epsilon v.6.8 starts on  2Jun2025 at 15: 0: 4 
+
+     This program is part of the open-source Quantum ESPRESSO suite
+     for quantum simulation of materials; please cite
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 21 395502 (2009);
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 29 465901 (2017);
+         "P. Giannozzi et al., J. Chem. Phys. 152 154105 (2020);
+          URL http://www.quantum-espresso.org", 
+     in publications or presentations arising from this work. More details at
+     http://www.quantum-espresso.org/quote
+
+     Parallel version (MPI & OpenMP), running on       1 processor cores
+     Number of MPI processes:                 1
+     Threads/MPI process:                     1
+
+     MPI processes distributed on     1 nodes
+     174069 MiB available memory on the printing compute node when the environment starts
+ 
+
+
+     Reading input file...
+     Broadcasting variables...
+     Reading PW restart file...
+
+     Reading xml data from directory:
+
+     ./Ge_out/Ge_scf.save/
+
+     IMPORTANT: XC functional enforced from input :
+     Exchange-correlation= PBE
+                           (   1   4   3   4   0   0   0)
+     Any further DFT definition will be discarded
+     Please, verify this is what you really want
+
+ 
+     G-vector sticks info
+     --------------------
+     sticks:   dense  smooth     PW     G-vecs:    dense   smooth      PW
+     Sum         967     967    313                20179    20179    3527
+ 
+     Using Slab Decomposition
+ 
+
+
+     Fermi energy [eV] is:  8.83253
+     The system is a metal...
+     metallic system: redefining wmin =     0.001000
+
+     Performing eps calculation...
+
+     xx,yy,zz plasmon frequences [eV] are:    13.881668752   13.883628946   13.882069043
+
+     Writing output on file...
+
+
+     eps          :     15.50s CPU     43.04s WALL (       1 calls)
+     dipole_calc  :      9.06s CPU     36.37s WALL (    8000 calls)
+ 
+ 
+     epsilon      :     20.89s CPU     48.66s WALL
+
+ 
+   This run was terminated on:  15: 0:52   2Jun2025            
+
+=------------------------------------------------------------------------------=
+   JOB DONE.
+=------------------------------------------------------------------------------=
