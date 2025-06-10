@@ -7,5 +7,5 @@ in_filename = argv[1]
 out_filename = 'input.extxyz'
 
 # read all frames into a list of ase.Atoms objects
-all_atoms = read(in_filename, format='espresso-in', index=":")
+all_atoms = read(in_filename, format='espresso-out', index=":")
 write(out_filename, all_atoms, format='extxyz')
