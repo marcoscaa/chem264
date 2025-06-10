@@ -1,10 +1,10 @@
-from ase.io import write
+from ase.io import write, read
 from ase.build import find_optimal_cell_shape, make_supercell
 from sys import argv
 
 def orthogonalize(non_ortho_atoms):
     #Compute transformation matrix P
-    P = find_optimal_cell_shape(non_ortho_atoms.cell,target_size=2,target_shape='sc')
+    P = find_optimal_cell_shape(non_ortho_atoms.get_cell(),target_size=2,target_shape='sc')
     #Make supercell - orthogonal
     ortho_atoms = make_supercell(non_ortho_atoms,P)
     #Return orthogonal cell atoms object
@@ -54,5 +54,5 @@ if __name__ == "__main__":
     orthogonal_atoms = orthogonalize(non_orthogonal_atoms)
     output_file = "scf.in"  # You can change the output filename
 
-    generate_pwscf_input_from_cif(cif_filename, output_file)
+    generate_pwscf_input(orthogonal_atoms, output_file)
 
