@@ -120,7 +120,7 @@ def compute_energy(eps, phi, x, dx, a, R):
         Total energy in atomic units.
     """
     V_K = v_exchange(phi, x, dx, a)             # exchange potential
-    K11 = np.trapz(phi**2 * V_K, x)            # K_11 = J_11 for single real orbital
+    K11 = np.trapezoid(phi**2 * V_K, x)            # K_11 = J_11 for single real orbital
     return 2.0 * eps - K11 + v_nn(R, a)
 
 
@@ -237,8 +237,8 @@ def main():
     V_K = v_exchange(phi, x, dx, a)         # exchange = V_H / 2
 
     # Coulomb and exchange integrals (equal for single real orbital)
-    J11 = np.trapz(phi**2 * V_H, x) / 2.0  # J_11 = (1/2) * <rho|V_H>
-    K11 = np.trapz(phi**2 * V_K, x)        # K_11 = <phi^2|V_K>
+    J11 = np.trapezoid(phi**2 * V_H, x) / 2.0  # J_11 = (1/2) * <rho|V_H>
+    K11 = np.trapezoid(phi**2 * V_K, x)        # K_11 = <phi^2|V_K>
 
     print()
     print(f"  R                   = {R:.4f} a.u.")

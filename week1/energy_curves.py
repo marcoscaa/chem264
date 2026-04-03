@@ -167,7 +167,7 @@ def energy_hartree(x, dx, R, a,
 
         if res_norm < conv_tol:
             VH = v_hartree(density_out, x, dx, a)
-            J  = np.trapz(density_out * VH, x)
+            J  = np.trapezoid(density_out * VH, x)
             return density_out, 2.0 * eps - 0.5 * J + v_nn(R, a)
 
         if len(densities_out) >= diis_size:
@@ -235,7 +235,7 @@ def energy_hf(x, dx, R, a,
 
         if res_norm < conv_tol:
             VH  = v_hartree(density_out, x, dx, a)
-            J   = np.trapz(density_out * VH, x)   # = 4*J_11
+            J   = np.trapezoid(density_out * VH, x)   # = 4*J_11
             K11 = J / 4.0                          # = J_11 for single real orbital
             return density_out, 2.0 * eps - K11 + v_nn(R, a)
 

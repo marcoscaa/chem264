@@ -87,7 +87,7 @@ def compute_energy(eps, density, x, dx, a, R):
         Total energy in atomic units.
     """
     VH = v_hartree(density, x, dx, a)
-    J  = np.trapz(density * VH, x)
+    J  = np.trapezoid(density * VH, x)
     return 2.0 * eps - 0.5 * J + v_nn(R, a)
 
 
@@ -168,7 +168,7 @@ def run_scf(x, dx, R, a, max_iter, conv_tol, diis_size):
         # ── Density residual: r = rho_in - rho_out ───────────────────────────
         density_out = 2.0 * phi**2
         res         = density - density_out
-        res_norm    = np.sqrt(np.trapz(res**2, x))
+        res_norm    = np.sqrt(np.trapezoid(res**2, x))
 
         # ── Total energy (using input density for consistency with eps) ───────
         E = compute_energy(eps, density, x, dx, a, R)
@@ -200,7 +200,7 @@ def run_scf(x, dx, R, a, max_iter, conv_tol, diis_size):
         B = np.zeros((m + 1, m + 1))
         for i in range(m):
             for j in range(m):
-                B[i, j] = np.trapz(residuals[i] * residuals[j], x)
+                B[i, j] = np.trapezoid(residuals[i] * residuals[j], x)
         B[m, :] = 1.0
         B[:, m] = 1.0
         B[m, m] = 0.0
@@ -239,7 +239,7 @@ def main():
     Vnn = v_nn(R, a)
     density = 2.0 * phi**2
     VH = v_hartree(density, x, dx, a)
-    J11 = np.trapz(density * VH, x) / 4.0   # J_11 = (1/4) * integral rho * V_H[rho] dx
+    J11 = np.trapezoid(density * VH, x) / 4.0   # J_11 = (1/4) * integral rho * V_H[rho] dx
 
     print()
     print(f"  R                   = {R:.4f} a.u.")

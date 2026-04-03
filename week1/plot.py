@@ -97,8 +97,8 @@ def plot_exact_ground_state(x, psi2d, eigenvalues, R, filename=None):
 
     # marginal densities
     dx = x[1] - x[0]
-    rho1 = np.trapz(prob2d, x, axis=1)   # integrate over x2 -> rho(x1)
-    rho2 = np.trapz(prob2d, x, axis=0)   # integrate over x1 -> rho(x2)
+    rho1 = np.trapezoid(prob2d, x, axis=1)   # integrate over x2 -> rho(x1)
+    rho2 = np.trapezoid(prob2d, x, axis=0)   # integrate over x1 -> rho(x2)
 
     # diagonal slice
     N = len(x)
