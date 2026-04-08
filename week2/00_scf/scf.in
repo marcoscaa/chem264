@@ -12,8 +12,8 @@
 /
 
 &SYSTEM
-    ibrav         = 2                 ! Bravais lattice index: 2 = Face-Centered Cubic (FCC)
-    a             = 5.658             ! Lattice parameter 'a' in Angstrom units
+    ibrav         = 0                 ! Cell lattice defined in CELL_PARAMETERS section 
+    celldm(1)     = 10.6923           ! Lattice parameter 'a' in Bohr units
     nat           = 2                 ! Number of atoms in the primitive unit cell
     ntyp          = 1                 ! Number of types of atoms
     ecutwfc       = 60.0              ! Kinetic energy cutoff for wavefunctions (in Ry)
@@ -31,6 +31,11 @@
 
 ATOMIC_SPECIES
   Ge      72.630   Ge.upf  ! PP file has to be in UPF format 
+
+CELL_PARAMETERS {alat}
+  0.5 0.0 0.5
+  0.5 0.5 0.0
+  0.0 0.5 0.5
 
 ATOMIC_POSITIONS {alat}
   Ge   0.00   0.00   0.00

@@ -14,6 +14,7 @@ plt.xlabel("alat (\$\\AA\$)")
 plt.ylabel("Energy (Ry)")
 plt.tight_layout()
 plt.savefig('cell_relax.pdf')
+plt.show()
 EOF
 
 python plot.py
