@@ -9,7 +9,7 @@ This activity introduces Born-Oppenheimer Molecular Dynamics (BOMD) using [Quant
 **Functional:** PBE (Perdew-Burke-Ernzerhof, GGA)  
 **Ensemble:** NVE (constant number of particles, volume, and energy — no thermostat)  
 **Time step:** 10 Rydberg a.u. ≈ 0.48 fs  
-**Total simulation time:** 2000 steps ≈ ~1 ps
+**Total simulation time:** 2000 steps ≈ 1 ps
 
 ---
 
