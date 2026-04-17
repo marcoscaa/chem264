@@ -10,8 +10,7 @@
 /
 
 &SYSTEM
-  ibrav         = 1             ! Cubic unit cell
-  celldm(1)     = 18.8973       ! 10 Angstrom in Bohr (1 Ang = 1.88973 Bohr)
+  ibrav         = 0             ! Cell vectors given explicitly in CELL_PARAMETERS
   nat           = 3
   ntyp          = 2
   ecutwfc       = 60.0          ! Ry  (hint_high for O from pseudo-dojo)
@@ -21,7 +20,7 @@
 &ELECTRONS
   electron_maxstep = 100
   conv_thr         = 1.0d-8     ! Tight convergence to make sure forces are correct
-/ 
+/
 
 &IONS
   ion_dynamics      = 'verlet'          ! Verlet integrator -> NVE
@@ -34,6 +33,11 @@
 ATOMIC_SPECIES
   O   15.9994  O.upf
   H    1.0079  H.upf
+
+CELL_PARAMETERS {angstrom}
+  10.0   0.0   0.0
+   0.0  10.0   0.0
+   0.0   0.0  10.0
 
 ! Experimental geometry: d(O-H) = 0.9572 Ang, angle(H-O-H) = 104.52 deg
 ! Molecule centered in the box (10 Ang cubic cell), plane in xy
