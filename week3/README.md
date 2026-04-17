@@ -323,3 +323,9 @@ ase gui out.extxyz
 ```
 
 Use the play button or arrow keys to step through the trajectory and watch the water molecule vibrate over the course of the simulation.
+
+You can also visualize the trajectory using the [Ovito code](https://www.ovito.org/).
+
+```bash
+ovito out.extxyz
+```
