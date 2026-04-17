@@ -54,7 +54,7 @@ cd ~/chem264/codes/week3/
 ## Files in This Directory
 
 ```
-week3/FPMD/
+week3/
 ├── h2o_nvt.in    # pw.x input file for BOMD (NVE)
 ├── sub.cmd       # SLURM job submission script
 └── pseudo/       # Directory where pseudopotential files must be placed
