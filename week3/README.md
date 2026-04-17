@@ -46,7 +46,7 @@ cd ~/chem264
 ### 3. Navigate to this week's folder
 
 ```bash
-cd ~/chem264/codes/week3/FPMD
+cd ~/chem264/codes/week3/
 ```
 
 ---
