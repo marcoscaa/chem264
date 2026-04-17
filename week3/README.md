@@ -4,7 +4,7 @@ This activity introduces Born-Oppenheimer Molecular Dynamics (BOMD) using [Quant
 
 ## System
 
-**Molecule:** Single H₂O (3 atoms) in a 10 Å cubic supercell  
+**Molecule:** Single H₂O (3 atoms) in a 10 Å cubic supercell (explicit `CELL_PARAMETERS`)  
 **Pseudopotentials:** Norm-conserving, scalar-relativistic, PBE (`H.upf`, `O.upf` — PseudoDojo ONCVPSP)  
 **Functional:** PBE (Perdew-Burke-Ernzerhof, GGA)  
 **Ensemble:** NVE (constant number of particles, volume, and energy — no thermostat)  
@@ -105,8 +105,7 @@ The main difference from the SCF runs you did in week 2 is `calculation = 'md'`.
 
 ```fortran
 &SYSTEM
-  ibrav         = 1             ! Simple cubic unit cell
-  celldm(1)     = 18.8973       ! Lattice parameter in Bohr (10 Å = 18.8973 Bohr)
+  ibrav         = 0             ! Cell vectors given explicitly in CELL_PARAMETERS
   nat           = 3             ! 3 atoms: 1 O + 2 H
   ntyp          = 2             ! 2 atomic species: O and H
   ecutwfc       = 60.0          ! Plane-wave kinetic energy cutoff (Ry)
@@ -114,7 +113,7 @@ The main difference from the SCF runs you did in week 2 is `calculation = 'md'`.
 /
 ```
 
-This section is largely the same as in the SCF case. The `ibrav = 1` together with `celldm(1)` defines a cubic box of side 10 Å. `nosym = .true.` is important for MD: as atoms move, the symmetry of the system changes at every step, so symmetry analysis must be turned off to avoid errors.
+This section is largely the same as in the SCF case. Setting `ibrav = 0` tells pw.x that the cell vectors are provided explicitly in the `CELL_PARAMETERS` card below, rather than being generated from a Bravais-lattice index and lattice parameters. `nosym = .true.` is important for MD: as atoms move, the symmetry of the system changes at every step, so symmetry analysis must be turned off to avoid errors.
 
 Note that `ecutrho` is not set here — for norm-conserving pseudopotentials, pw.x defaults to `ecutrho = 4 * ecutwfc`, which is the correct value.
 
@@ -149,6 +148,11 @@ ATOMIC_SPECIES
   O   15.9994  O.upf
   H    1.0079  H.upf
 
+CELL_PARAMETERS {angstrom}
+  10.0   0.0   0.0
+   0.0  10.0   0.0
+   0.0   0.0  10.0
+
 ATOMIC_POSITIONS {angstrom}
   O   5.000000   5.000000   5.000000
   H   5.757800   5.585100   5.000000
@@ -157,7 +161,7 @@ ATOMIC_POSITIONS {angstrom}
 K_POINTS {gamma}
 ```
 
-The molecule is placed at the center of the box using the experimental geometry (O-H bond = 0.9572 Å, H-O-H angle = 104.52°). Since this is a gas-phase molecule (non-periodic), only the Γ-point is needed for k-point sampling.
+The `CELL_PARAMETERS` card explicitly defines the three lattice vectors of the simulation box in Å, forming a 10 Å cubic supercell. This replaces the `ibrav`/`celldm` approach and makes the cell geometry immediately visible in the input file. The molecule is placed at the center of the box using the experimental geometry (O-H bond = 0.9572 Å, H-O-H angle = 104.52°). Since this is a gas-phase molecule (non-periodic), only the Γ-point is needed for k-point sampling.
 
 ---
 
