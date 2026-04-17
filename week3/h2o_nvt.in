@@ -25,7 +25,6 @@
 &IONS
   ion_dynamics      = 'verlet'          ! Verlet integrator -> NVE
   ion_temperature   = 'not_controlled'  ! no thermostat (NVE)
-  tempw             = 300.0             ! initial temperature (K) for velocity randomization
   pot_extrapolation = 'second_order'    ! extrapolate potential -> cheaper SCF at each step
   wfc_extrapolation = 'second_order'    ! extrapolate wavefunctions
 /
@@ -45,5 +44,12 @@ ATOMIC_POSITIONS {angstrom}
   O   5.000000   5.000000   5.000000
   H   5.757800   5.585100   5.000000
   H   4.242200   5.585100   5.000000
+
+! Velocities (a.u.) drawn from Maxwell-Boltzmann at 300 K, COM motion removed,
+! rescaled to T = 300.00 K (seed 42, numpy).
+ATOMIC_VELOCITIES
+  O  -0.0001286411  -0.0000271760   0.0000463872
+  H   0.0009983832  -0.0001879253  -0.0002733383
+  H   0.0010436645   0.0006193164  -0.0004630112
 
 K_POINTS {gamma}
