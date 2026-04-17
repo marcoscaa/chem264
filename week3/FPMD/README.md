@@ -223,3 +223,29 @@ tail -f h2o_nvt.out
 ```
 
 Each MD step will print the step number, total energy, kinetic energy of the nuclei, and temperature. A well-behaved NVE run should show a conserved total energy (kinetic + potential) throughout the simulation.
+
+---
+
+## Analyzing the Results
+
+Once the job has finished (or while it is still running), you can plot the energies and temperature as a function of time using the provided Python script.
+
+First, activate the course Python environment:
+
+```bash
+module load miniconda3
+conda activate chem264
+```
+
+Then run the analysis script, passing the output file as an argument:
+
+```bash
+python plot_md.py h2o_nvt.out
+```
+
+The script will open an interactive plot window with two panels:
+
+1. **Energies vs time** — potential energy $E_\text{pot}$, nuclear kinetic energy $E_\text{kin}$, and the conserved total energy $E_\text{tot} = E_\text{pot} + E_\text{kin}$, all in eV. The energies are shifted so the mean total energy is zero, making fluctuations easy to read.
+2. **Temperature vs time** — instantaneous nuclear temperature in K, with the time-averaged mean shown as a dashed line.
+
+The figure is also saved to `md_energies.png` in the current directory. In a well-behaved NVE simulation, $E_\text{tot}$ should remain nearly flat throughout, while $E_\text{pot}$ and $E_\text{kin}$ oscillate out of phase as kinetic and potential energy are exchanged during the molecular vibrations.
