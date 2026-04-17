@@ -24,6 +24,7 @@
 
 &IONS
   ion_dynamics      = 'verlet'          ! Verlet integrator -> NVE
+  ion_velocities    = 'from_input'      ! Read velocities from input file
   ion_temperature   = 'not_controlled'  ! no thermostat (NVE)
   pot_extrapolation = 'second_order'    ! extrapolate potential -> cheaper SCF at each step
   wfc_extrapolation = 'second_order'    ! extrapolate wavefunctions
