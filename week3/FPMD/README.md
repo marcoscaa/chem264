@@ -75,7 +75,15 @@ cat h2o_nvt.in
 Or open it in a text editor:
 
 ```bash
-nano h2o_nvt.in
+vi h2o_nvt.in
+```
+
+We can also look at the atomic structure of the system using ase:
+
+```bash
+module load minoconda3
+conda activate chem264
+ase gui h2o_nvt.in 
 ```
 
 ### Input File Walkthrough
