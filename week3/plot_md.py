@@ -36,7 +36,6 @@ time   = np.arange(1, nsteps + 1) * dt_au * AU2FS / 1000  # ps
 
 # Shift energies so that the mean total energy is zero (easier to read)
 epot -= np.mean(etot)
-ekin -= np.mean(etot)
 etot -= np.mean(etot)
 
 # ------------------------------------------------------------
