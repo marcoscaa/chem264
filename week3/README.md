@@ -264,3 +264,62 @@ The script will open an interactive plot window with two panels:
 2. **Temperature vs time** — instantaneous nuclear temperature in K, with the time-averaged mean shown as a dashed line.
 
 The figure is also saved to `md_energies.png` in the current directory. In a well-behaved NVE simulation, $E_\text{tot}$ should remain nearly flat throughout, while $E_\text{pot}$ and $E_\text{kin}$ oscillate out of phase as kinetic and potential energy are exchanged during the molecular vibrations.
+
+---
+
+## Visualizing the Trajectory
+
+To inspect the atomic trajectory you need to convert the pw.x output file to the extended XYZ (extxyz) format, which is supported by most molecular visualization tools (e.g. OVITO, ASE GUI, VMD).
+
+### 1. Convert the pw.x output to extxyz
+
+A conversion script is provided in `codes/utils/`. Make sure the course Python environment is active:
+
+```bash
+module load miniconda3
+conda activate chem264
+```
+
+Then run the script, passing the pw.x output file as an argument:
+
+```bash
+python ~/chem264/codes/utils/convert_pwout_to_extxyz.py h2o_nvt.out
+```
+
+This reads all MD frames from `h2o_nvt.out` and writes them to a file called `out.extxyz` in the current directory.
+
+### 2. Find the full path of the output file on the cluster
+
+Before copying the file to your local machine you need its absolute path on the cluster. Run:
+
+```bash
+realpath out.extxyz
+```
+
+This will print something like:
+
+```
+/hb/home/<cruzid>/chem264/codes/week3/FPMD/out.extxyz
+```
+
+Keep this path — you will need it in the next step.
+
+### 3. Copy the file to your local machine
+
+Open a **new terminal on your local machine** (not on the cluster) and run:
+
+```bash
+scp <cruzid>@hb.ucsc.edu:/hb/home/<cruzid>/chem264/codes/week3/FPMD/out.extxyz .
+```
+
+Replace `<cruzid>` with your CruzID and the remote path with the one printed by `realpath` above. The `.` at the end copies the file into your current local directory.
+
+### 4. Visualize the trajectory
+
+Once the file is on your local machine you can open it with the ASE GUI:
+
+```bash
+ase gui out.extxyz
+```
+
+Use the play button or arrow keys to step through the trajectory and watch the water molecule vibrate over the course of the simulation.
