@@ -46,11 +46,11 @@ ATOMIC_POSITIONS {angstrom}
   H   5.757800   5.585100   5.000000
   H   4.242200   5.585100   5.000000
 
-! Velocities (a.u.) drawn from Maxwell-Boltzmann at 300 K, COM motion removed,
-! rescaled to T = 300.00 K (seed 42, numpy).
+! Velocities in Ry a.u. (Bohr/(hbar/Ry)) from Maxwell-Boltzmann at 300 K,
+! COM motion removed, rescaled to T = 300.00 K (seed 42, numpy).
 ATOMIC_VELOCITIES
-  O  -0.0001286411  -0.0000271760   0.0000463872
-  H   0.0009983832  -0.0001879253  -0.0002733383
-  H   0.0010436645   0.0006193164  -0.0004630112
+  O  -0.0002572821  -0.0000543519   0.0000927743
+  H   0.0019967664  -0.0003758507  -0.0005466765
+  H   0.0020873291   0.0012386328  -0.0009260225
 
 K_POINTS {gamma}

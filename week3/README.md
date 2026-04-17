@@ -131,6 +131,7 @@ The electrons section is identical to what you used in the SCF runs. A tight con
 ```fortran
 &IONS
   ion_dynamics      = 'verlet'          ! Velocity-Verlet integrator (NVE)
+  ion_velocities    = 'from_input'      ! Velocities read from VELOCITY section
   ion_temperature   = 'not_controlled'  ! No thermostat — NVE ensemble
   pot_extrapolation = 'second_order'    ! Extrapolate V_eff from previous steps
   wfc_extrapolation = 'second_order'    ! Extrapolate wavefunctions from previous steps
@@ -140,10 +141,11 @@ The electrons section is identical to what you used in the SCF runs. A tight con
 This section is new and controls the nuclear dynamics:
 
 - `ion_dynamics = 'verlet'` selects the velocity-Verlet algorithm, which propagates atomic positions and velocities and exactly conserves the total energy (NVE).
+- `ion_velocities = 'from_input'` tells pw.x to read the initial velocities from the `ATOMIC_VELOCITIES` card in the input file, rather than setting them to zero or randomizing them internally.
 - `ion_temperature = 'not_controlled'` means no thermostat is applied — the system evolves at constant total energy.
 - `pot_extrapolation` and `wfc_extrapolation` are efficiency settings: instead of starting the SCF from scratch at every MD step, pw.x extrapolates the potential and wavefunctions from the previous steps as an initial guess, reducing the number of SCF iterations needed.
 
-Note: in QE pw.x 7.2, the `tempw` keyword only initializes velocities when an active thermostat is chosen. With `ion_temperature = 'not_controlled'` it is ignored and atoms start at rest. Initial velocities must therefore be supplied explicitly via the `ATOMIC_VELOCITIES` card described below.
+Note: in QE pw.x 7.2, the `tempw` keyword only initializes velocities when an active thermostat is chosen. With `ion_temperature = 'not_controlled'` it is ignored and atoms start at rest. Initial velocities must therefore be supplied explicitly via the `ATOMIC_VELOCITIES` card, and `ion_velocities = 'from_input'` must be set to instruct pw.x to read them.
 
 ```fortran
 ATOMIC_SPECIES
@@ -161,16 +163,16 @@ ATOMIC_POSITIONS {angstrom}
   H   4.242200   5.585100   5.000000
 
 ATOMIC_VELOCITIES
-  O  -0.0001286411  -0.0000271760   0.0000463872
-  H   0.0009983832  -0.0001879253  -0.0002733383
-  H   0.0010436645   0.0006193164  -0.0004630112
+  O  -0.0002572821  -0.0000543519   0.0000927743
+  H   0.0019967664  -0.0003758507  -0.0005466765
+  H   0.0020873291   0.0012386328  -0.0009260225
 
 K_POINTS {gamma}
 ```
 
 The `CELL_PARAMETERS` card explicitly defines the three lattice vectors of the simulation box in Å, forming a 10 Å cubic supercell. This replaces the `ibrav`/`celldm` approach and makes the cell geometry immediately visible in the input file. The molecule is placed at the center of the box using the experimental geometry (O-H bond = 0.9572 Å, H-O-H angle = 104.52°). Since this is a gas-phase molecule (non-periodic), only the Γ-point is needed for k-point sampling.
 
-The `ATOMIC_VELOCITIES` card provides the initial nuclear velocities in atomic units (Bohr / ℏ E_h⁻¹). Each component is drawn independently from a Gaussian distribution with zero mean and standard deviation σ = √(k_BT/m), which follows from the equipartition theorem: each translational degree of freedom carries ½k_BT of kinetic energy on average. After sampling, the center-of-mass velocity is subtracted to remove net translation, and the velocities are uniformly rescaled so that the instantaneous temperature — defined as 2KE / (N_dof k_B), with N_dof = 3N − 3 = 6 — is exactly 300 K.
+The `ATOMIC_VELOCITIES` card provides the initial nuclear velocities in Rydberg atomic units (Bohr/(ħ/Ry)). This is the time unit used internally by pw.x: `dt = 10` corresponds to 10 ħ/Ry ≈ 0.48 fs, confirming the unit. Each velocity component is drawn from a Gaussian with zero mean and standard deviation σ = √(2 k_B T / m), which follows from the equipartition theorem (½ k_B T per degree of freedom) expressed in Rydberg a.u., where the kinetic energy is ¼mv² rather than the familiar ½mv². After sampling, the center-of-mass velocity is subtracted to remove net translation, and the velocities are uniformly rescaled so that the instantaneous temperature — defined as KE / (½ N_dof k_B), with N_dof = 3N − 3 = 6 — is exactly 300 K.
 
 ---
 
