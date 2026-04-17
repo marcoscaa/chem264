@@ -31,12 +31,14 @@ If you have already cloned the repository in a previous week, update it:
 
 ```bash
 cd ~/chem264
+module load git
 git pull
 ```
 
 If this is your first time, clone it first:
 
 ```bash
+module load git
 git clone https://github.com/marcoscaa/chem264.git ~/chem264
 cd ~/chem264
 ```
