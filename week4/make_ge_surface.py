@@ -49,14 +49,10 @@ def delete_undercoordinated_atoms(atoms,atype,atype2,rcut,mincoord):
             distances = atoms.get_distances(atom.index,ind_atoms,mic=True)
             filt=np.logical_and(distances<rcut,distances>0.1)
             coord_number[ind] = len(distances[filt])
-            if len(distances[filt])==2:
-                print(distances)
 
-
-    print(coord_number)
     del atoms[coord_number<mincoord]
     return atoms
 
 if __name__ == "__main__":
     # Generate a 3-layer slab with 10 Å vacuum
-    generate_germanium_slab(layers=5, vacuum=10.0, index=(1,0,0))
+    generate_germanium_slab(layers=5, vacuum=10.0, index=(1,1,1))
