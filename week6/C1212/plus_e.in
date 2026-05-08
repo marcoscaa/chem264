@@ -34,8 +34,8 @@ ATOMIC_SPECIES
   Ge      72.630   Ge.upf  ! PP file has to be in UPF format 
 
 CELL_PARAMETERS alat
-1.00 0.01 0.00
-0.01 1.00 0.00
+1.00 0.005 0.00
+0.005 1.00 0.00
 0.00 0.00 1.00
 
 ATOMIC_POSITIONS {crystal}
