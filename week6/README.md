@@ -23,15 +23,17 @@ Both deformations use a strain amplitude of **ε = 0.01** (1%).
 ```
 week6/
 ├── Ge.upf               # Germanium pseudopotential (UPF format)
-├── C1111/               # Calculation of C₁₁ (uniaxial strain along x)
+├── C1111/               # Calculation of C₁₁ and C₁₂ (uniaxial strain along x)
 │   ├── plus_e.in        # Input: ε₁₁ = +0.01
 │   ├── minus_e.in       # Input: ε₁₁ = −0.01
+│   ├── sub.cmd          # SLURM submission script
 │   └── results/
 │       ├── plus_e.out   # Output from plus_e.in
 │       └── minus_e.out  # Output from minus_e.in
-└── C1212/               # Calculation of C₄₄ (shear strain in the 1-2 plane)
-    ├── plus_e.in        # Input: ε₁₂ = +0.01
-    ├── minus_e.in       # Input: ε₁₂ = −0.01
+└── C1212/               # Calculation of C₄₄ (symmetric shear strain in the 1-2 plane)
+    ├── plus_e.in        # Input: ε₁₂ = ε₂₁ = +0.005
+    ├── minus_e.in       # Input: ε₁₂ = ε₂₁ = −0.005
+    ├── sub.cmd          # SLURM submission script
     └── results/
         ├── plus_e.out   # Output from plus_e.in
         └── minus_e.out  # Output from minus_e.in
@@ -77,19 +79,23 @@ C₁₂ = [σ₂₂(+ε) − σ₂₂(−ε)] / (2ε)
 
 where σ₂₂ is the (2,2) diagonal component (equivalently, σ₃₃ by symmetry).
 
-### C1212 — Shear strain (monoclinic deformation)
+### C1212 — Symmetric shear strain (pure shear, no rigid rotation)
 
-A shear deformation is applied in the **1-2 plane**:
+A symmetric shear deformation is applied in the **1-2 plane**:
 
 | File        | CELL_PARAMETERS (in units of alat)          |
 |-------------|----------------------------------------------|
-| `plus_e.in` | `1.00  0.01  0.00 / 0.00  1.00  0.00 / 0.00  0.00  1.00` |
-| `minus_e.in`| `1.00 -0.01  0.00 / 0.00  1.00  0.00 / 0.00  0.00  1.00` |
+| `plus_e.in` | `1.00  0.005  0.00 / 0.005  1.00  0.00 / 0.00  0.00  1.00` |
+| `minus_e.in`| `1.00 -0.005  0.00 / -0.005  1.00  0.00 / 0.00  0.00  1.00` |
+
+The strain matrix is symmetric (ε₁₂ = ε₂₁ = ±0.005), which corresponds to a
+pure shear with no rigid-body rotation. The equivalent engineering shear strain
+is γ₁₂ = 2ε₁₂ = ±0.01.
 
 The elastic constant **C₄₄** is then:
 
 ```
-C₄₄ = [σ₁₂(+ε) − σ₁₂(−ε)] / (2ε)
+C₄₄ = [σ₁₂(+γ) − σ₁₂(−γ)] / (2γ)    with γ = 2ε₁₂ = 0.01
 ```
 
 where σ₁₂ is the (1,2) off-diagonal component of the stress tensor.
@@ -115,25 +121,27 @@ cp ../../Ge.upf .
 
 ### Step 2 — Run pw.x
 
-Run both jobs for each elastic constant in sequence (or submit them to the cluster;
-see below):
+On the cluster, submit the provided `sub.cmd` script from inside each deformation
+folder (see [Submitting to the Cluster](#submitting-to-the-cluster-slurm) below):
 
 ```bash
-# Example: run C1111 calculations locally (serial)
 cd C1111
-cp ../Ge.upf .
-pw.x < plus_e.in  > results/plus_e.out
-pw.x < minus_e.in > results/minus_e.out
+sbatch sub.cmd
+
+cd ../C1212
+sbatch sub.cmd
 ```
 
-Repeat the same steps inside the `C1212/` folder.
+Output files (`plus_e.out`, `minus_e.out`) are written to the same folder as the
+input files. Pre-computed outputs are also available in the `results/` subdirectory
+of each folder.
 
 ### Step 3 — Extract the stress tensor
 
 After the calculation completes, search for the stress block in the output file:
 
 ```bash
-grep -A 4 "total   stress" results/plus_e.out
+grep -A 4 "total   stress" plus_e.out
 ```
 
 The output looks like:
@@ -152,13 +160,17 @@ The right-hand 3×3 block contains the stress tensor components in **kbar**.
 
 ### Step 4 — Compute the elastic constants
 
-Apply the central difference formula (ε = 0.01):
+Apply the central difference formula to each constant:
 
 ```
-C = [σ(+ε) − σ(−ε)] / (2 × 0.01)
+C₁₁ = [σ₁₁(+ε) − σ₁₁(−ε)] / (2 × 0.01)     ε = strain amplitude = 0.01
+
+C₁₂ = [σ₂₂(+ε) − σ₂₂(−ε)] / (2 × 0.01)
+
+C₄₄ = [σ₁₂(+γ) − σ₁₂(−γ)] / (2 × 0.01)     γ = 2ε₁₂ = 2 × 0.005 = 0.01
 ```
 
-The result will be in **kbar**. Convert to GPa by dividing by 10.
+All results are in **kbar**. Convert to GPa by dividing by 10.
 
 > **Sign convention**: In QE's output, positive diagonal stress components
 > correspond to compressive stress, and negative to tensile stress. Keep track
@@ -168,21 +180,19 @@ The result will be in **kbar**. Convert to GPa by dividing by 10.
 
 ## Submitting to the Cluster (SLURM)
 
-Below is a template submission script for the Hummingbird cluster at UCSC. 
-Adjust the account, partition, and module names to match your cluster's
-configuration (if not the Hummingbird).
+A ready-to-use submission script (`sub.cmd`) is provided in each deformation folder.
+It is configured for the Hummingbird cluster at UCSC:
 
 ```bash
 #!/bin/bash
 #SBATCH -p instruction  # Partition name
 #SBATCH -J test        # Job name
-#SBATCH --mail-user=<cruzid>@ucsc.edu
 #SBATCH --mail-type=ALL
 #SBATCH -o job%.j.out    # Name of stdout output file
-#SBATCH -N 1        # Total number of nodes requested (128x24/Instructional only)
+#SBATCH -N 1        # Total number of nodes requested
 #SBATCH -n 16        # Total number of mpi tasks requested per node
-#SBATCH -t 00:30:00  # Run Time (hh:mm:ss) - 30 min (optional)
-#SBATCH --mem=2G # Memory to be allocated PER NODE
+#SBATCH -t 00:30:00  # Run Time (hh:mm:ss) - 30 min
+#SBATCH --mem=4G # Memory to be allocated PER NODE
 
 export OMPI_MCA_btl=tcp,sm,self
 module load quantumespresso/7.2
@@ -193,10 +203,10 @@ mpirun -np $SLURM_NTASKS pw.x -nk 4 < plus_e.in  > plus_e.out
 mpirun -np $SLURM_NTASKS pw.x -nk 4 < minus_e.in > minus_e.out
 ```
 
-Save this script (e.g., `submit.sh`) inside each deformation folder and submit with:
+Submit from inside each deformation folder:
 
 ```bash
-sbatch submit.sh
+sbatch sub.cmd
 ```
 
 ---
