@@ -45,6 +45,11 @@ Both calculations start from the equilibrium diamond-cubic cell of Ge with
 lattice parameter **a = 5.76 Å**. The cell is deformed by modifying the
 `CELL_PARAMETERS` block.
 
+> **Unit cell convention**: The elastic tensor indices (1, 2, 3) refer to the
+> Cartesian axes of the **conventional cubic cell** (8 atoms, as used here),
+> not the primitive cell. This is the standard convention for reporting C₁₁,
+> C₁₂, and C₄₄ of cubic materials.
+
 ### C1111 — Uniaxial strain (tetragonal deformation)
 
 The unit cell is uniformly strained along the **x**-direction:
@@ -163,26 +168,29 @@ The result will be in **kbar**. Convert to GPa by dividing by 10.
 
 ## Submitting to the Cluster (SLURM)
 
-Below is a template submission script. Adjust the account, partition, and module
-names to match your cluster's configuration.
+Below is a template submission script for the Hummingbird cluster at UCSC. 
+Adjust the account, partition, and module names to match your cluster's
+configuration (if not the Hummingbird).
 
 ```bash
 #!/bin/bash
-#SBATCH --job-name=Ge_elastic
-#SBATCH --account=<YOUR_ACCOUNT>
-#SBATCH --partition=<YOUR_PARTITION>
-#SBATCH --nodes=1
-#SBATCH --ntasks=16
-#SBATCH --time=01:00:00
-#SBATCH --output=job_%j.out
-#SBATCH --error=job_%j.err
+#SBATCH -p instruction  # Partition name
+#SBATCH -J test        # Job name
+#SBATCH --mail-user=<cruzid>@ucsc.edu
+#SBATCH --mail-type=ALL
+#SBATCH -o job%.j.out    # Name of stdout output file
+#SBATCH -N 1        # Total number of nodes requested (128x24/Instructional only)
+#SBATCH -n 16        # Total number of mpi tasks requested per node
+#SBATCH -t 00:30:00  # Run Time (hh:mm:ss) - 30 min (optional)
+#SBATCH --mem=2G # Memory to be allocated PER NODE
 
-module load quantum-espresso   # adjust to your cluster's module name
+export OMPI_MCA_btl=tcp,sm,self
+module load quantumespresso/7.2
 
 cp ../../Ge.upf .
 
-mpirun -np $SLURM_NTASKS pw.x < plus_e.in  > results/plus_e.out
-mpirun -np $SLURM_NTASKS pw.x < minus_e.in > results/minus_e.out
+mpirun -np $SLURM_NTASKS pw.x -nk 4 < plus_e.in  > plus_e.out
+mpirun -np $SLURM_NTASKS pw.x -nk 4 < minus_e.in > minus_e.out
 ```
 
 Save this script (e.g., `submit.sh`) inside each deformation folder and submit with:
@@ -216,5 +224,5 @@ to verify your analysis workflow before running new jobs.
 | C₁₂      | ~39 GPa         | 44 GPa     |
 | C₄₄      | ~68 GPa         | 66 GPa     |
 
-Discrepancies with experiment reflect the choice of pseudopotential, exchange-
-correlation functional, and convergence parameters.
+Discrepancies with experiment reflect the choice of pseudopotential, exchange-correlation 
+functional, and convergence parameters.
