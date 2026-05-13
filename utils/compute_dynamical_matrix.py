@@ -99,9 +99,159 @@ def calculate_and_print_eigenvalues(dynamical_matrix):
         else:
             print(f"Eigenvalue {i+1}: {eigenvalue:12.6f}")
 
+def animate_vibrational_modes(eigenvalues, eigenvectors, atoms,
+                              amplitude=0.4, frames_per_period=60, fps=20):
+    """
+    Build an interactive 3D animation of the vibrational modes.
+
+    A slider at the bottom of the figure lets you switch between the 3N normal
+    modes; each mode oscillates the equilibrium structure along its eigenvector
+    with a cosine time profile: R_I(t) = R_I^0 + A cos(2 pi t / T) u_I, where
+    u_I = nu_I / sqrt(m_I) is the un-mass-weighted displacement and A is set
+    by `amplitude` (in Angstrom).
+
+    Args:
+        eigenvalues (np.ndarray): Eigenvalues of the dynamical matrix, in
+            eV/(A^2 * amu), as returned by np.linalg.eig on the matrix built
+            by `calculate_dynamical_matrix`.
+        eigenvectors (np.ndarray): (3N, 3N) array whose columns are the
+            mass-weighted normal modes. Each eigenvector has components ordered
+            as (atom_1_x, atom_1_y, atom_1_z, atom_2_x, ...), matching the
+            convention used to build the dynamical matrix.
+        atoms (ase.Atoms): Equilibrium structure (positions, symbols, masses).
+        amplitude (float, optional): Maximum atomic displacement (in Angstrom)
+            used when visualizing each mode. Defaults to 0.4.
+        frames_per_period (int, optional): Frames per full oscillation.
+            Defaults to 60.
+        fps (float, optional): Animation playback rate. Defaults to 20.
+
+    Returns:
+        matplotlib.animation.FuncAnimation: Animation handle. Keep a reference
+            in the caller to prevent garbage collection.
+    """
+    import matplotlib.pyplot as plt
+    from matplotlib.animation import FuncAnimation
+    from matplotlib.widgets import Slider
+    from mpl_toolkits.mplot3d import Axes3D  # noqa: F401 (registers 3d projection)
+
+    N = len(atoms)
+    n_modes = 3 * N
+    masses = atoms.get_masses()
+    R0 = atoms.get_positions()
+    symbols = atoms.get_chemical_symbols()
+
+    # np.linalg.eig may return complex types for a numerically near-symmetric
+    # matrix. The physical D is real-symmetric, so take the real part.
+    eigenvalues = np.real(eigenvalues)
+    eigenvectors = np.real(eigenvectors)
+
+    # ---- Mass-weighted eigenvectors -> Cartesian displacements ----
+    # nu_I = sqrt(m_I) u_I, so u_I = nu_I / sqrt(m_I). The eigenvector layout
+    # follows the matrix: component 3*I + i is (atom I, direction i).
+    inv_sqrt_m = 1.0 / np.sqrt(np.repeat(masses, 3))   # shape (3N,)
+
+    # Normalize each mode so max(||u_I||) = 1; multiplying by `amplitude` later
+    # then sets the largest atomic displacement to `amplitude` Angstrom.
+    modes = np.zeros((n_modes, N, 3))
+    for k in range(n_modes):
+        u = (eigenvectors[:, k] * inv_sqrt_m).reshape(N, 3)
+        max_disp = np.linalg.norm(u, axis=1).max()
+        if max_disp > 1e-12:
+            u = u / max_disp
+        modes[k] = u
+
+    # ---- Eigenvalues -> frequencies in cm^-1 ----
+    # Same conversion as in `calculate_and_print_eigenvalues`.
+    conv = 1.602176634e-19 / (1e-10) ** 2 / 1.66053906660e-27 / (29979245800) ** 2
+    omega_sq_cm2 = eigenvalues * conv / (4 * np.pi ** 2)
+    # Imaginary frequencies (negative omega^2) are returned as negative numbers.
+    freq_cm1 = np.sign(omega_sq_cm2) * np.sqrt(np.abs(omega_sq_cm2))
+
+    # Sort by frequency, descending: mode 1 = highest-frequency vibration.
+    order = np.argsort(-freq_cm1)
+    modes = modes[order]
+    freq_cm1 = freq_cm1[order]
+
+    # ---- Detect covalent bonds for visualization (simple distance cutoff) ----
+    bonds = []
+    for i in range(N):
+        for j in range(i + 1, N):
+            r = np.linalg.norm(R0[i] - R0[j])
+            cutoff = 1.3 if 'H' in (symbols[i], symbols[j]) else 1.8
+            if r < cutoff:
+                bonds.append((i, j))
+
+    # ---- Figure and 3D axes ----
+    fig = plt.figure(figsize=(9, 9))
+    ax = fig.add_axes([0.05, 0.13, 0.9, 0.82], projection='3d')
+
+    color_map = {'H': 'white', 'O': 'red', 'C': 'gray',
+                 'N': 'blue', 'Ge': 'darkcyan'}
+    colors = [color_map.get(s, 'magenta') for s in symbols]
+    sizes = [80 if s == 'H' else 250 for s in symbols]
+
+    scatter = ax.scatter(R0[:, 0], R0[:, 1], R0[:, 2],
+                         c=colors, s=sizes, edgecolors='black', linewidths=1.0,
+                         depthshade=False)
+
+    bond_lines = []
+    for (i, j) in bonds:
+        line, = ax.plot([R0[i, 0], R0[j, 0]],
+                        [R0[i, 1], R0[j, 1]],
+                        [R0[i, 2], R0[j, 2]],
+                        '-', color='gray', linewidth=2.5)
+        bond_lines.append(line)
+
+    # Fix the view box so atoms stay in frame during the oscillation.
+    half_range = (R0.max(axis=0) - R0.min(axis=0)).max() / 2 + amplitude + 0.6
+    center = (R0.max(axis=0) + R0.min(axis=0)) / 2
+    ax.set_xlim(center[0] - half_range, center[0] + half_range)
+    ax.set_ylim(center[1] - half_range, center[1] + half_range)
+    ax.set_zlim(center[2] - half_range, center[2] + half_range)
+    try:
+        ax.set_box_aspect((1, 1, 1))   # available in modern matplotlib
+    except AttributeError:
+        pass
+    ax.set_xlabel('x (A)')
+    ax.set_ylabel('y (A)')
+    ax.set_zlabel('z (A)')
+    title = ax.set_title("", fontsize=12)
+
+    # ---- Mode-selector slider ----
+    state = {'mode': 0}
+    slider_ax = fig.add_axes([0.15, 0.04, 0.7, 0.03])
+    mode_slider = Slider(slider_ax, 'Mode', 1, n_modes, valinit=1, valstep=1)
+
+    def on_slider_change(val):
+        state['mode'] = int(val) - 1
+
+    mode_slider.on_changed(on_slider_change)
+
+    # ---- Animation callback ----
+    def update(frame):
+        k = state['mode']
+        phase = 2 * np.pi * frame / frames_per_period
+        disp = amplitude * np.cos(phase) * modes[k]
+        R = R0 + disp
+
+        scatter._offsets3d = (R[:, 0], R[:, 1], R[:, 2])
+        for line, (i, j) in zip(bond_lines, bonds):
+            line.set_data([R[i, 0], R[j, 0]], [R[i, 1], R[j, 1]])
+            line.set_3d_properties([R[i, 2], R[j, 2]])
+
+        f = freq_cm1[k]
+        title.set_text(f"Mode {k+1}/{n_modes}    omega = {f:9.2f} cm^-1")
+        return (scatter, *bond_lines, title)
+
+    ani = FuncAnimation(fig, update, frames=frames_per_period,
+                        interval=1000.0 / fps, blit=False)
+    plt.show()
+    return ani
+
+
 if __name__ == "__main__":
 
-    # 1. Read one output file to extract number of atoms and masses 
+    # 1. Read one output file to extract number of atoms and masses
     atoms = read("atom_1_dir_1_1.out")
 
     # 2. Calculate the dynamical matrix.
@@ -114,4 +264,9 @@ if __name__ == "__main__":
 
         # 4. Print the normal modes
         calculate_and_print_eigenvalues(dynamical_matrix)
+
+        # 5. Launch an interactive animation of the normal modes. Drag the
+        #    slider at the bottom of the window to switch between modes.
+        eigenvalues, eigenvectors = np.linalg.eig(dynamical_matrix)
+        ani = animate_vibrational_modes(eigenvalues, eigenvectors, atoms)
 
