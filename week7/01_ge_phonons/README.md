@@ -9,7 +9,7 @@ Now, create a supercell and apply finite displacements to all atoms in the super
 You will need to provide a QE input file and give it to the command below. This 
 input file contains the structure of Ge diamond in the conventional unit cell.
 ```
-phonopy --qe -d --dim="2 2 2" --pa=AUTO -c ge_diamond.in
+phonopy-init --qe -d --dim="2 2 2" -c ge_diamond.in
 ```
 
 This command will generate only 1 PW input file (only the cell and positions). We now have 
@@ -29,12 +29,12 @@ sbatch sub.cmd
 
 Create the force constants matrix
 ```
-phonopy -f supercell-001.out
+phonopy-init -f supercell-001.out
 ```
 
 Post-process the file - plot the phonon dispersion
 ```
-phonopy --qe -c ge_diamond.in -p band.conf
+phonopy -p --config band.conf
 ```
 
 
