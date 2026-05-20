@@ -8,7 +8,6 @@
     outdir        = './Ge_out/'       ! Directory for output/temporary files (MUST EXIST)
     verbosity     = 'low'             ! Level of output detail ('low', 'medium', 'high')
     tprnfor       = .true.            ! Print forces
-    tstress       = .true.            ! Print stress tensor
 /
 
 &SYSTEM
