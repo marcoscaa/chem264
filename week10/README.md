@@ -21,7 +21,7 @@ states it reads (lecture, *"Dielectric susceptibility from KS states"*):
 
 $$
 \epsilon_2(\omega) = \frac{4\pi}{V}\int_{\mathrm{BZ}}\frac{d^3k}{(2\pi)^3}
-\sum_{m}\sum_{n\neq m} f_m(\mathbf{k})\,|\boldsymbol{\mu}_{nm}(\mathbf{k})|^2
+\sum_{m}\sum_{n\neq m} f_m(\mathbf{k})|\boldsymbol{\mu}_{nm}(\mathbf{k})|^2
 \left(\frac{\Gamma}{(\omega_{nm}(\mathbf{k})-\omega)^2+\Gamma^2} -
 \frac{\Gamma}{(\omega_{nm}(\mathbf{k})+\omega)^2+\Gamma^2}\right)
 $$
