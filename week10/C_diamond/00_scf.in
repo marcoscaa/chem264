@@ -1,4 +1,4 @@
-! Input file for SCF calculation of bulk Crmanium (Diamond Structure)
+! Input file for SCF calculation of bulk Carbon (Diamond Structure)
 
 &CONTROL
     calculation   = 'scf'             ! Type of calculation: Self-Consistent Field
