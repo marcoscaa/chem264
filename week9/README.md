@@ -191,4 +191,4 @@ the Fermi energy (8.7649 eV) and the overall shape of the bands and DOS.
   calculations: Challenges and tools*, Comput. Mater. Sci. **49**, 299 (2010) —
   source of the FCC high-symmetry $\mathbf{k}$ points used in `01_bands.in`.
   <https://www.sciencedirect.com/science/article/pii/S0927025610002697>
-- Course lecture notes: `../../Week 9.tex` (*Band structure*).
+- Course lecture notes (Week 9) (*Band structure*).
