@@ -1,7 +1,7 @@
 # Week 10 — Dielectric function of Ge and C (diamond structure)
 
 This folder contains the Quantum ESPRESSO input files used to compute the
-**frequency-dependent dielectric function** $\epsilon(\omega) = \epsilon_1(\omega) + i\,\epsilon_2(\omega)$
+**frequency-dependent dielectric function** $\epsilon(\omega) = \epsilon_1(\omega) + i\epsilon_2(\omega)$
 of germanium and carbon in the diamond structure, using the `pw.x` (plane-wave DFT)
 and `epsilon.x` (post-processing) codes.
 
@@ -20,21 +20,32 @@ is governed by the complex dielectric function. Expressed in terms of Kohn–Sha
 states it reads (lecture, *"Dielectric susceptibility from KS states"*):
 
 $$
-\epsilon_2(\omega) = \frac{4\pi}{V}\sum_{k}\sum_{n\neq k} f_k\,|\boldsymbol{\mu}_{nk}|^2
-\left(\frac{\Gamma}{(\omega_{nk}-\omega)^2+\Gamma^2}
-- \frac{\Gamma}{(\omega_{nk}+\omega)^2+\Gamma^2}\right)
+\epsilon_2(\omega) = \frac{4\pi}{V}\int_{\mathrm{BZ}}\frac{d^3k}{(2\pi)^3}
+\sum_{m}\sum_{n\neq m} f_m(\mathbf{k})\,|\boldsymbol{\mu}_{nm}(\mathbf{k})|^2
+\left(\frac{\Gamma}{(\omega_{nm}(\mathbf{k})-\omega)^2+\Gamma^2} -
+\frac{\Gamma}{(\omega_{nm}(\mathbf{k})+\omega)^2+\Gamma^2}\right)
 $$
 
-with an analogous expression for $\epsilon_1$. The key physical ingredients map
-directly onto the inputs you will run:
+with an analogous expression for $\epsilon_1$. Here the indices $m$ and $n$ run
+over **energy states** (Kohn–Sham bands): the occupation number $f_m$ guarantees
+that we only count transitions out of *occupied* states $m$ into states $n$
+(the occupation depends on $\mathbf{k}$ as well, hence $f_m(\mathbf{k})$). The
+$\int_{\mathrm{BZ}} d^3k$ is a genuine integral over reciprocal space, and the
+transition energy $\omega_{nm}(\mathbf{k})=E_n(\mathbf{k})-E_m(\mathbf{k})$ depends
+on the crystal momentum $\mathbf{k}$. In practice `epsilon.x` evaluates this
+Brillouin-zone integral **numerically**, as a weighted sum over the discrete
+k-points of the NSCF mesh — the denser the grid, the closer the numerical sum
+approaches the true integral.
+
+The key physical ingredients map directly onto the inputs you will run:
 
 | Quantity in the theory | Where it comes from in the calculation |
 |---|---|
-| KS eigenvalues $E_{n,k}$, transition energies $\omega_{nk}=E_n-E_k$ | the SCF + NSCF band structure (`00_scf.in`, `01_nscf.in`) |
-| Occupations $f_k$ (which states are valence vs. conduction) | smearing in the SCF/NSCF runs |
-| Dipole matrix elements $\|\boldsymbol{\mu}_{nk}\|^2$ | computed internally by `epsilon.x` |
+| KS eigenvalues $E_n(\mathbf{k})$, transition energies $\omega_{nm}(\mathbf{k})=E_n(\mathbf{k})-E_m(\mathbf{k})$ | the SCF + NSCF band structure (`00_scf.in`, `01_nscf.in`) |
+| Occupations $f_m(\mathbf{k})$ (which states are valence vs. conduction) | smearing in the SCF/NSCF runs |
+| Dipole matrix elements $\|\boldsymbol{\mu}_{nm}(\mathbf{k})\|^2$ | computed internally by `epsilon.x` |
 | Lifetime broadening $\Gamma$ | `intersmear` in `02_epsilon.in` |
-| Sum over the Brillouin zone $\sum_k$ | the dense **20×20×20** k-mesh in the NSCF run |
+| Integral over the Brillouin zone $\int_{\mathrm{BZ}} d^3k$ (done numerically as a sum over the k-grid) | the dense **20×20×20** k-mesh in the NSCF run |
 | Unit-cell volume $V$ | the lattice from `ibrav`/`a` |
 
 Recall the take-home physics from the lecture: only the **imaginary part**
@@ -66,8 +77,8 @@ electron density on a moderate **8×8×8** k-mesh.
 
 Reuses the converged potential from Step 1 and recomputes the bands on a **much
 denser 20×20×20 k-mesh**, adding empty (conduction) states. This dense sampling is
-needed to accurately perform the Brillouin-zone integral $\sum_k$ in the formulas
-above. Two changes relative to the SCF run are essential:
+needed to accurately perform the Brillouin-zone integral $\int_{\mathrm{BZ}} d^3k$
+in the formulas above (which the code evaluates as a numerical sum over this grid). Two changes relative to the SCF run are essential:
 
 - `nbnd = 20`: adds unoccupied bands. Absorption is a transition from occupied to
   empty states, so we need conduction bands as final states $n$.
@@ -165,7 +176,7 @@ plt.plot(e, x); plt.xlabel('Energy (eV)'); plt.ylabel(r'$\epsilon_2$'); plt.show
 This is where the calculation connects back to the physics of the lecture:
 
 - **Absorption onset.** The energy where $\epsilon_2$ first rises from zero is set
-  by the band gap (the smallest $\omega_{nk}$ with nonzero dipole). As discussed in
+  by the band gap (the smallest $\omega_{nm}(\mathbf{k})$ with nonzero dipole). As discussed in
   the lecture (Fig. of the dielectric functions), **PBE underestimates band gaps**:
   it predicts **Ge to be nearly metallic** (vanishing gap, $\epsilon_2$ rising almost
   from zero energy), while **diamond C is correctly insulating** with an onset
