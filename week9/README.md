@@ -15,7 +15,7 @@ $$\psi_{n\mathbf{k}}(\mathbf{r}) = u_{n\mathbf{k}}(\mathbf{r})e^{i\mathbf{k}\cdo
 to rewrite the Kohn-Sham (KS) equations for a periodic crystal as one eigenvalue
 problem *per* reciprocal-space point $\mathbf{k}$:
 
-$$\left[-\tfrac{1}{2}(\nabla + i\mathbf{k})^2 + V_{tot}(\mathbf{r})\right] u_{n\mathbf{k}}(\mathbf{r}) = \epsilon_{n\mathbf{k}}\, u_{n\mathbf{k}}(\mathbf{r}).$$
+$$\left[-\tfrac{1}{2}(\nabla + i\mathbf{k})^2 + V_{tot}(\mathbf{r})\right] u_{n\mathbf{k}}(\mathbf{r}) = \epsilon_{n\mathbf{k}} u_{n\mathbf{k}}(\mathbf{r}).$$
 
 The **band structure** is the plot of the eigenvalues $\epsilon_{n\mathbf{k}}$ along a
 path through high-symmetry points of the Brillouin zone, and the **DOS** $g(E)$
