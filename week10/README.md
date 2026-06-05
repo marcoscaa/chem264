@@ -20,7 +20,7 @@ is governed by the complex dielectric function. Expressed in terms of Kohn–Sha
 states it reads (lecture, *"Dielectric susceptibility from KS states"*):
 
 $$
-\epsilon_2(\omega) = \frac{4\pi}{V}\sum_{k}\sum_{n\neq k} f_k\,|\boldsymbol{\mu}_{nk}|^2
+\epsilon_2(\omega) = \frac{4\pi}{V}\sum_{k}\sum_{n\neq k} f_k|\boldsymbol{\mu}_{nk}|^2
 \left(\frac{\Gamma}{(\omega_{nk}-\omega)^2+\Gamma^2} -
 \frac{\Gamma}{(\omega_{nk}+\omega)^2+\Gamma^2}\right)
 $$
