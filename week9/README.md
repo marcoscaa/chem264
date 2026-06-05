@@ -3,7 +3,7 @@
 This folder contains the Quantum ESPRESSO (PW) input files needed to compute the
 **electronic band structure** and the **density of states (DOS)** of germanium in
 the diamond (FCC, two-atom basis) structure. The calculations follow the workflow
-described in the *Week 9 — Band structure* lecture notes (`../../Week 9.tex`); the
+described in the *Week 9 — Band structure* lecture notes; the
 sections below point back to the relevant theory as you go.
 
 ## Background: what we are computing and why
