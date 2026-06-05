@@ -1,7 +1,7 @@
 # Week 10 — Dielectric function of Ge and C (diamond structure)
 
 This folder contains the Quantum ESPRESSO input files used to compute the
-**frequency-dependent dielectric function** $\epsilon(\omega) = \epsilon_1(\omega) + i\,\epsilon_2(\omega)$
+**frequency-dependent dielectric function** $\epsilon(\omega) = \epsilon_1(\omega) + i\epsilon_2(\omega)$
 of germanium and carbon in the diamond structure, using the `pw.x` (plane-wave DFT)
 and `epsilon.x` (post-processing) codes.
 
