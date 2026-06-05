@@ -16,7 +16,7 @@ module load quantumespresso/7.2
 mpirun -np $SLURM_NTASKS pw.x -nk 4 < 00_scf.in > 00_scf.out
 mpirun -np $SLURM_NTASKS pw.x -nk 4 < 01_bands.in > 01_bands.out
 bands.x < 02_pp_bands.in > 02_pp_bands.out
-mpirun -np $SLURM_NTASKS $PW -nk 4 -in 03_dos.in > 03_dos.out
+mpirun -np $SLURM_NTASKS pw.x -nk 4 -in 03_dos.in > 03_dos.out
 dos.x < 04_pp_dos.in > 04_pp_dos.out
 
 echo ""
