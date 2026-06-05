@@ -10,7 +10,7 @@ sections below point back to the relevant theory as you go.
 
 In the lecture we used **Bloch's theorem**,
 
-$$\psi_{n\mathbf{k}}(\mathbf{r}) = u_{n\mathbf{k}}(\mathbf{r})\,e^{i\mathbf{k}\cdot\mathbf{r}},$$
+$$\psi_{n\mathbf{k}}(\mathbf{r}) = u_{n\mathbf{k}}(\mathbf{r})e^{i\mathbf{k}\cdot\mathbf{r}}$$
 
 to rewrite the Kohn-Sham (KS) equations for a periodic crystal as one eigenvalue
 problem *per* reciprocal-space point $\mathbf{k}$:
